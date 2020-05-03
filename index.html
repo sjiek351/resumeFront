@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <title>document </title>
+    <style>
+        body {
+            font-family: Microsoft JhengHei;
+        }
+
+        #about {
+            background: url(https://picsum.photos/400/1000);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 100vh;
+            position: fixed;
+            box-shadow: 5px 0px 20px black;
+            z-index: 1;
+        }
+
+        #photo {
+            height: 20vh;
+            border: 1px solid black;
+        }
+
+        #people {
+            height: 60vh;
+        }
+
+        main {
+            background-color: #ffffff;
+            background-image: linear-gradient(105deg, #ffffff 0%, #ffffff 33%, #ffe4d1 83%, #fff2ae 100%);
+
+        }
+
+        /*媒體查詢*/
+        @media screen and (min-width: 992px) {
+            #about {
+                clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            #about {
+                position: static;
+                height: 30vh;
+            }
+
+            #people {
+                height: 30vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <header class="col-lg-4" id="about">
+                <div class="row align-items-center justify-content-center" id="people">
+                    <div class="text-center">
+                        <img class="rounded-circle my-2" id="photo" src="images/me.jpg" alt="">
+                        <p class="text-light">興趣梅有目的，興趣本身就是目的</p>
+
+                    </div>
+                </div>
+            </header>
+
+            <main class="col-lg-8 offset-lg-4">
+                <article class="container my-3">
+                    <section>
+                        <h1>崔永昀</h1>
+                        <p>
+                            <b>個人資料</b>男 86年次 役畢(2020/3)<br />
+                            <b>主要手機</b>
+                            0909-402-650<br />
+                            <b>E-mail</b>
+                            sjiek351@gmail.com
+                        </p>
+                    </section>
+                    <hr />
+                    <section>
+                        <h4>作品</h4>
+                        <p>
+                            <div class="card" style="width: 18rem;">
+                                <img src="images/project1.png" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">東華大學弓道社社團網頁</h5>
+                                    <p class="card-text">HTML,CSS,JavaScript,Jquery,Bootstrap</p>
+                                    <a href="https://sjiek351.github.io/KyudoClub/project1/front.html"
+                                        class="btn btn-primary" target="_blank">前往</a>
+                                </div>
+                            </div>
+                        </p>
+                    </section>
+                    <hr />
+                    <section>
+                        <h4>學歷</h4>
+                        <p>
+                            國立東華大學。應用數學。學士 - 2015~2019
+                        </p>
+                    </section>
+                    <hr />
+                    <section>
+                        <h4>自傳</h4>
+                        <p>【關於我】
+                            出生於1997年，來自新北市，國立東華大學應用數學系畢業，2019年應屆畢業生。
+                            身為數學系統計組的我，精密的思考與嚴謹的邏輯推導是我擅長之處，遇到難題時會想要刨根究底直到找出問題的邏輯性。
+                            在大學修課期間，我接觸過很多種程式語言，而寫程式深深吸引到我，於是我決定從較多人使用的Java語言開始深入學習。
+                            畢業後，我在當兵期間看書自學前端語言，並幫助東華大學弓道社設計社團網頁。
+                        </p>
+                        <p>【活動經歷】
+                            大二曾參與籌備社團校際營隊、全校新生入學活動、系上暑期營隊，磨練溝通、臨機應變與團隊合作的能力。
+                            大三擔任弓道社總務，運用office軟體及自己撰寫的Java程式管理社團財產，並於年度社團評鑑中拿下「優等」。
+                        </p>
+                        <p>【未來規劃】
+                            喜歡一個東西，就會想要更多。
+                            自從接觸前端語言之後，我一直很想知道網頁設計這一塊到底能做到什麼地步，而在學習的過程中不斷認識到不同的函式庫、技術，讓我在設計網頁時充滿了樂趣，未來會繼續嘗試接觸更多類型的功能，並且發揮專長與經驗，設法幫助公司解決問題。
+                        </p>
+                    </section>
+                    <hr />
+                </article>
+
+            </main>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</body>
+
+</html>
