@@ -4,17 +4,14 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <title>document </title>
+    <title>我的履歷</title>
     <style>
         body {
-            font-family: Microsoft JhengHei;
+            font-family: SimHei, Microsoft JhengHei, serif;
         }
 
         #about {
-            background: url(https://picsum.photos/400/1000);
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
+
             height: 100vh;
             position: fixed;
             box-shadow: 5px 0px 20px black;
@@ -23,102 +20,231 @@
 
         #photo {
             height: 20vh;
-            border: 1px solid black;
+
         }
 
         #people {
-            height: 60vh;
+            background-image: url(https://picsum.photos/400/400);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 55vh;
+
         }
 
-        main {
-            background-color: #ffffff;
-            background-image: linear-gradient(105deg, #ffffff 0%, #ffffff 33%, #ffe4d1 83%, #fff2ae 100%);
-
+        p {
+            word-spacing: 0.5rem;
         }
+
+        i {
+            color: #26626B;
+        }
+
+        .message {
+            vertical-align: super;
+        }
+
+
 
         /*媒體查詢*/
         @media screen and (min-width: 992px) {
             #about {
-                clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 56%, 80% 100%, 0% 100%);
+            }
+
+            #people {
+                margin-bottom: 1vh;
+            }
+
+            .asideimg {
+                width: 100%;
+                size: cover;
+                margin-top: 1vh;
+                margin-bottom: 1vh;
+                height: 13vh;
+                filter: brightness(.5);
+            }
+
+            .item:hover .asideimg {
+                transition-duration: 1s;
+                filter: brightness(1);
+            }
+
+            .item {
+                position: relative;
+            }
+
+            .item .asidet {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 2rem;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+            }
+
+            .asidet {
+                text-shadow: 2px 2px #333;
+
             }
         }
 
         @media screen and (max-width: 992px) {
             #about {
                 position: static;
-                height: 30vh;
+                height: 20vh;
+            }
+
+            #photo {
+                height: 13vh;
             }
 
             #people {
-                height: 30vh;
+                height: 20vh;
+            }
+
+            .item {
+                display: none;
+            }
+
+            #myinfo {
+                text-align: center;
             }
         }
     </style>
+
 </head>
 
 <body>
 
     <div class="container-fluid">
         <div class="row">
-            <header class="col-lg-4" id="about">
-                <div class="row align-items-center justify-content-center" id="people">
-                    <div class="text-center">
-                        <img class="rounded-circle my-2" id="photo" src="images/me.jpg" alt="">
-                        <p class="text-light">興趣梅有目的，興趣本身就是目的</p>
-
+            <header class="col-lg-3" id="about">
+                <div class="asidebar">
+                    <div class="row align-items-center justify-content-center" id="people">
+                        <div class="text-center">
+                            <a href="#myinfo">
+                            <img class="rounded-circle my-2" id="photo" src="images/me.jpg" alt=""></a>
+                            <p class="text-light">興趣梅有目的，興趣本身就是目的</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="asidebar">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="item text-center" id="it-project">
+                            <a href="#project">
+                                <img class="asideimg" src="https://picsum.photos/400/100?random=5">
+                                <h3 class="asidet text-light"><b>- 作品 </b></h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="asidebar">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="item text-center" id="it-back">
+                            <a href="#back">
+                                <img class="asideimg" src="https://picsum.photos/400/100?random=10">
+                                <h3 class="asidet text-light"><b>- 學歷 </b></h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="asidebar">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="item text-center" id="it-myself">
+                            <a href="#myself">
+                                <img class="asideimg" src="https://picsum.photos/400/100?random=15">
+                                <h3 class="asidet text-light"><b>- 自傳 </b></h3>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </header>
 
             <main class="col-lg-8 offset-lg-4">
-                <article class="container my-3">
-                    <section>
-                        <h1>崔永昀</h1>
+                <article class="my-3">
+                    <section class="section-index" id="myinfo">
+                        <h2><b>崔永昀</b></h2>
                         <p>
-                            <b>個人資料</b>男 86年次 役畢(2020/3)<br />
-                            <b>主要手機</b>
-                            0909-402-650<br />
-                            <b>E-mail</b>
-                            sjiek351@gmail.com
+                            1997.11.2 | 2019應屆畢業於國立東華大學 | 役畢(2020.3)<br />
+                            <a href="https://github.com/sjiek351" target="_blank"><i
+                                    class="fab fa-github-square fa-2x"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100000409191287" target="_blank"><i
+                                    class="fab fa-facebook-square fa-2x"></i></a>
+                            <br />
+                            <a href="tel:0909402650"><i class="fas fa-phone fa-2x"></i><span class="message">
+                                    0909-402-650</span></a> <br />
+                            <a href="mailto:sjiek351@gmail.com"><i class="fas fa-at fa-2x"></i><span class="message">
+                                    sjiek351@gmail.com</span></a>
                         </p>
                     </section>
                     <hr />
-                    <section>
-                        <h4>作品</h4>
-                        <p>
-                            <div class="card" style="width: 18rem;">
-                                <img src="images/project1.png" class="card-img-top" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title">東華大學弓道社社團網頁</h5>
-                                    <p class="card-text">HTML,CSS,JavaScript,Jquery,Bootstrap</p>
-                                    <a href="https://sjiek351.github.io/KyudoClub/project1/front.html"
-                                        class="btn btn-primary" target="_blank">前往</a>
+                    <section class="section-index" id="project">
+                        <h4>| 作品</h4>
+                        <div class="row">
+                            <div class="col-lg">
+                                <p>
+                                    <h5>國立東華大學弓道社 社團網頁</h5>
+                                    <ul>
+                                        <li>
+                                            使用 Visual Studio Code 編譯
+                                        </li>
+                                        <li>
+                                            HTML5、CSS3 基本設計
+                                        </li>
+                                        <li>
+                                            Bootstrap 框架規劃響應式網頁 (RWD) 版型
+                                        </li>
+                                        <li>
+                                            使用Bootstrap JS 互動組件
+                                        </li>
+                                        <li>
+                                            JavaScript、JQuery 製作按鈕變換
+                                        </li>
+                                        <li>
+                                            插入 Google Fonts 、 Font Awesome 小元件豐富網站
+                                        </li>
+                                    </ul>
+                                </p>
+
+                            </div>
+                            <div class="col-lg ">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="images/project1.png" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">東華大學弓道社社團網頁</h5>
+                                        <a href="https://sjiek351.github.io/KyudoClub/project1/front.html"
+                                            class="btn btn-primary" target="_blank">前往</a>
+                                    </div>
                                 </div>
                             </div>
-                        </p>
+                        </div>
                     </section>
                     <hr />
-                    <section>
-                        <h4>學歷</h4>
+                    <section class="section-index" id="back">
+                        <h4>| 學歷</h4>
                         <p>
-                            國立東華大學。應用數學。學士 - 2015~2019
+                            國立東華大學．應用數學．學士 - 2015~2019<br />
+                            臺北市立萬芳高中 - 2012~2015
                         </p>
                     </section>
                     <hr />
-                    <section>
-                        <h4>自傳</h4>
-                        <p>【關於我】
-                            出生於1997年，來自新北市，國立東華大學應用數學系畢業，2019年應屆畢業生。
-                            身為數學系統計組的我，精密的思考與嚴謹的邏輯推導是我擅長之處，遇到難題時會想要刨根究底直到找出問題的邏輯性。
-                            在大學修課期間，我接觸過很多種程式語言，而寫程式深深吸引到我，於是我決定從較多人使用的Java語言開始深入學習。
+                    <section class="section-index" id="myself">
+                        <h4>| 自傳</h4>
+                        <p>【關於我】<br />
+                            出生於1997年，來自新北市，國立東華大學應用數學系畢業，2019年應屆畢業生。<br />
+                            身為數學系統計組的我，精密的思考與嚴謹的邏輯推導是我擅長之處，遇到難題時會想要刨根究底直到找出問題的邏輯性。<br />
+                            在大學修課期間，我接觸過很多種程式語言，而寫程式深深吸引到我，於是我決定從較多人使用的Java語言開始深入學習。<br />
                             畢業後，我在當兵期間看書自學前端語言，並幫助東華大學弓道社設計社團網頁。
                         </p>
-                        <p>【活動經歷】
-                            大二曾參與籌備社團校際營隊、全校新生入學活動、系上暑期營隊，磨練溝通、臨機應變與團隊合作的能力。
+                        <p>【活動經歷】<br />
+                            大二曾參與籌備社團校際營隊、全校新生入學活動、系上暑期營隊，磨練溝通、臨機應變與團隊合作的能力。<br />
                             大三擔任弓道社總務，運用office軟體及自己撰寫的Java程式管理社團財產，並於年度社團評鑑中拿下「優等」。
                         </p>
-                        <p>【未來規劃】
-                            喜歡一個東西，就會想要更多。
+                        <p>【未來規劃】<br />
+                            喜歡一個東西，就會想要更多。<br />
                             自從接觸前端語言之後，我一直很想知道網頁設計這一塊到底能做到什麼地步，而在學習的過程中不斷認識到不同的函式庫、技術，讓我在設計網頁時充滿了樂趣，未來會繼續嘗試接觸更多類型的功能，並且發揮專長與經驗，設法幫助公司解決問題。
                         </p>
                     </section>
@@ -131,9 +257,18 @@
     <footer>
 
     </footer>
-
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.section-index').hide();
+            setTimeout(function () {
+                $('.section-index').slideDown(1000);
+            }, 000);
+        });
+    </script>
 </body>
 
 </html>
