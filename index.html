@@ -10,11 +10,9 @@
     <style>
         body {
             font-family: SimHei, Microsoft JhengHei, serif;
-
         }
 
         #about {
-
             height: 100vh;
             position: fixed;
             box-shadow: 5px 0px 20px black;
@@ -23,7 +21,6 @@
 
         #photo {
             height: 20vh;
-
         }
 
         #people {
@@ -32,18 +29,6 @@
             background-position: center center;
             background-size: cover;
             height: 54vh;
-
-        }
-
-        main {
-            background: url(images/book-t.jpg), url(images/book-b.jpg), url(images/book-m2.jpg);
-            background-size: 100%, 100%, 100%;
-            background-position-y: top, bottom, center;
-            background-repeat: no-repeat, no-repeat, repeat-y;
-        }
-
-        article {
-            margin: 50px auto 10vh auto;
         }
 
         p {
@@ -63,7 +48,7 @@
             vertical-align: super;
         }
 
-        img{
+        img {
             max-width: 100%;
         }
 
@@ -113,6 +98,14 @@
 
             }
 
+            .bgbl {
+                background-color: #eee;
+            }
+
+            .bgw {
+                background-color: white;
+            }
+
             .card {
                 width: 20rem;
             }
@@ -141,6 +134,13 @@
                 text-align: center;
             }
 
+            main {
+                background: url(images/book-t.jpg), url(images/book-b.jpg), url(images/book-m2.jpg);
+                background-size: 100%, 100%, 100%;
+                background-position-y: top, bottom, center;
+                background-repeat: no-repeat, no-repeat, repeat-y;
+            }
+
             .card {
                 max-width: 100vw;
             }
@@ -150,7 +150,7 @@
 </head>
 
 <body>
-    <div class="all container-fluid">
+    <div class="container-fluid">
         <div class="row">
             <!-- 左側欄 -->
             <header class="col-lg-3" id="about">
@@ -159,7 +159,7 @@
                         <div class="text-center">
                             <a href="#myinfo">
                                 <img class="rounded-circle my-2" id="photo" src="images/me.jpg" alt=""></a>
-                            <p class="text-light">興趣梅有目的，興趣本身就是目的</p>
+                            <p class="text-light">興趣沒有目的，興趣本身就是目的</p>
                         </div>
                     </div>
                 </div>
@@ -194,34 +194,51 @@
                     </div>
                 </div>
             </header>
-            <!-- 主欄 -->
-            <main class="col-lg-9 offset-lg-3">
-                <article class="container">
-                    <section class="section-index" id="myinfo">
+        </div>
+    </div>
+    <!-- 主欄 -->
+    <main>
+        <article class="bgw">
+            <section class="container ection-index" id="myinfo">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-9">
                         <br />
                         <div class="col-lg">
                             <h2><b>崔永昀</b></h2>
                             <p>
                                 1997.11.2 | 役畢(2020.3)<br />
-                                2019應屆畢業於國立東華大學<br />
+                                2019應屆畢業於國立東華大學<br /><br />
                                 <a href="https://github.com/sjiek351" target="_blank"><i
                                         class="fab fa-github-square fa-2x"></i></a>
                                 <a href="https://www.facebook.com/profile.php?id=100000409191287" target="_blank"><i
                                         class="fab fa-facebook-square fa-2x"></i></a>
                                 <br />
-                                <a href="tel:0909402650"><i class="fas fa-phone fa-2x"></i><span class="message">
-                                        0909-402-650</span></a> <br />
-                                <a href="mailto:sjiek351@gmail.com"><i class="fas fa-at fa-2x"></i><span
-                                        class="message">
-                                        sjiek351@gmail.com</span></a>
+                            <div class="row">
+                                <div class="col-lg">
+                                    <a href="tel:0909402650"><i class="fas fa-phone fa-2x"></i><span class="message">
+                                            0909-402-650</span></a>
+                                </div>
+                                <div class="col-lg">
+                                    <a href="mailto:sjiek351@gmail.com"><i class="fas fa-at fa-2x"></i><span
+                                            class="message">
+                                            sjiek351@gmail.com</span></a>
+                                </div>
+                            </div>
                             </p>
                         </div>
                         <div class="col-lg">
 
                         </div>
-                    </section>
-                    <hr />
-                    <section class="section-index" id="project">
+                    </div>
+                </div>
+                <hr />
+            </section>
+        </article>
+
+        <article class="bgbl">
+            <section class="container section-index" id="project">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-9">
                         <h4>| 作品</h4>
                         <!-- navs組件 頭 -->
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -281,7 +298,7 @@
                                 <div class="row my-3">
                                     <div class="col-lg-4">
                                         <p>
-                                        <h5>Java 8 國際證照 OCAJP</h5>                                        
+                                        <h5>Java 8 國際證照 OCAJP</h5>
                                         </p>
                                     </div>
                                     <div class="col-lg-4">
@@ -290,33 +307,48 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <hr />
-                    <section class="section-index" id="back">
+                    </div>
+                </div>
+                <hr />
+            </section>
+        </article>
+
+        <article class="bgw">
+            <section class="container section-index" id="back">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-9">
                         <h4>| 學歷</h4>
                         <p>
                             國立東華大學．應用數學系統計組．學士 - 2015~2019<br />
                             臺北市立萬芳高中 - 2012~2015
                         </p>
-                    </section>
-                    <hr />
-                    <section class="section-index" id="myself">
-                        <h4>| 自傳</h4>
+                    </div>
+                </div>
+                <hr />
+            </section>
+        </article>
+
+        <article class="bgbl">
+            <section class="container section-index" id="myself">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-9">
+                        <h4>| 自傳</h4><br />
                         <p>
                         <h5>【關於我】</h5>
-                        出生於1997年，來自新北市，國立東華大學應用數學系畢業，2019年應屆畢業生。
+                        <br />出生於1997年，來自新北市，國立東華大學應用數學系畢業，2019年應屆畢業生。
 
-                        <br />身為數學系統計組的我，精密的思考與嚴謹的邏輯推導是我擅長之處，遇到難題時會想要刨根究底直到找出問題的邏輯性。
+                        <br /><br />身為數學系統計組的我，精密的思考與嚴謹的邏輯推導是我擅長之處，遇到難題時會想要刨根究底直到找出問題的邏輯性。
 
-                        <br />在大學修課期間，我接觸過很多種程式語言，而寫程式深深吸引到我，於是我決定從較多人使用的Java語言開始深入學習。
+                        <br /><br />在大學修課期間，我接觸過很多種程式語言，而寫程式深深吸引到我，於是我決定從較多人使用的Java語言開始深入學習。
 
-                        <br />畢業後，我報名了補習班的程式課程，學習完整的程式語言架構，並在服兵役期間看書自學前端語言，假日實作網站頁面，役畢後協助東華大學弓道社建立社團網頁。
+                        <br /><br />畢業後，我報名了補習班的程式課程，學習完整的程式語言架構，並在服兵役期間看書自學前端語言，假日實作網站頁面，役畢後協助東華大學弓道社建立社團網頁。
                         </p>
                         <br />
                         <P>
                         <h5>【學習經歷】</h5>
+                        <br />為了補足我在基礎方面的不熟悉，畢業後我報名了巨匠補習班的課程，目的在於更有效率的踏入程式領域，避免自學時因基礎不足而面臨窘境，而其餘時間則拿來自我練功，雙管齊下提升學習效益。
+                        <br /><br />
                         <ul>
-                            <li>2017.08 , C&C++程式設計 - 18小時</li>
                             <li>2019.09 , Java 先修基礎程式設計 - 30小時</li>
                             <li>2019.10 , Java OCP JP 程式設計師認證班 - 108小時</li>
                             <li>2020.04 , SQL Server資料庫概論 - 15小時</li>
@@ -327,26 +359,29 @@
                         <br />
                         <P>
                         <h5>【活動經歷】</h5>
-                        大二曾參與籌備社團校際營隊、全校新生入學活動、系上暑期營隊，磨練溝通、臨機應變與團隊合作的能力。
+                        <br />大二曾參與籌備社團校際營隊、全校新生入學活動、系上暑期營隊，磨練溝通、臨機應變與團隊合作的能力。
 
-                        <br />大三擔任弓道社總務，運用office軟體管理社產，並於年度社團評鑑中拿下「優等」，鍛練資料管理與資訊統整的能力。
+                        <br /><br />大三擔任弓道社總務，運用office軟體管理社產，並於年度社團評鑑中拿下「優等」，鍛練資料管理與資訊統整的能力。
                         </P>
                         <br />
                         <P>
                         <h5>【未來規劃】</h5>
-                        喜歡一個東西，就會想要更多。
+                        <br />喜歡一個東西，就會想要更多。
 
-                        <br />自從接觸前端語言之後，我時常會撰寫程式直到半夜，在學習的過程中認識到不同的函式庫與技術，都讓我在設計網頁時充滿了樂趣，「尋找最佳的程式碼」成了我每次寫程式的目標，而未來會繼續嘗試接觸更多類型的功能，並且發揮專長與經驗，為公司創造價值。
+                        <br /><br />自從接觸前端語言之後，我時常會撰寫程式直到半夜，在學習的過程中認識到不同的函式庫與技術，都讓我在設計網頁時充滿了樂趣，「尋找最佳的程式碼」成了我每次寫程式的目標，而未來會繼續嘗試接觸更多類型的功能，並且發揮專長與經驗，為公司創造價值。
 
-                        <br />我的遠期目標是成為一位全端工程師，為了實現這個目標，短期內，我會在任務完成之餘，運用所學創造超出預期的效果，下班時間持續學習框架與新技術，在一年之內晉升為程式設計師。接著，嘗試針對問題提供多個不同的解決方案，提出更符合需求的設計，為客戶打造最豐富的內容，然後按照公司願景繼續發展，希望我的加入可以給公司帶來更多的商業價值，同時讓自己的能力近一步提升。
+                        <br /><br />我的遠期目標是成為一位全端工程師，為了實現這個目標，短期內，我會在任務完成之餘，運用所學創造超出預期的效果，下班時間持續學習框架與新技術，在一年之內晉升為程式設計師。接著，嘗試針對問題提供多個不同的解決方案，提出更符合需求的設計，為客戶打造最豐富的內容，然後按照公司願景繼續發展，希望我的加入可以給公司帶來更多的商業價值，同時讓自己的能力近一步提升。
                         </p>
                         <br />
-                    </section>
-                    <hr />
-                </article>
-            </main>
-        </div>
-    </div>
+                    </div>
+                </div>
+                <hr />
+            </section>
+
+        </article>
+    </main>
+
+
     <footer>
 
     </footer>
