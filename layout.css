@@ -1,0 +1,233 @@
+body {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(https://picsum.photos/200/300);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-attachment: fixed, fixed;
+    background-position: center, center;
+    /*  */
+    font-size: larger;
+    /*  */
+}
+
+a {
+    text-decoration: none!important;
+}
+
+img{
+    max-width: 90vw;
+}
+
+/* header */
+
+header {
+    /* height: 100vh; */
+}
+
+#header-photo, .header-content {
+    /* margin-top: 5%; */
+    height: 60%;
+}
+
+#header-photo {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#photo {
+    width: 70%;
+    max-width: 40vw;
+}
+
+.header-content {
+    height: 60%;
+}
+
+.header-content hr {
+    background-color: #fff;
+}
+
+ #header-items {
+    height: 30%;
+}
+
+
+
+#header-items {
+    /* background-color: red; */
+    display: flex;
+}
+
+.item {
+    position: relative;
+}
+
+.item-img {
+    max-height: 15%;
+    width: 100%;
+    filter: brightness(.7);
+}
+
+.item:hover .item-img {
+    transition-duration: 1s;
+    filter: brightness(1);
+}
+
+.item .item-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 偏移 */
+#item-works, #item-edu,#item-myself {
+    clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 15% 50%, 0% 0%);
+    margin-right: -40px;
+}
+
+#header-items{
+    margin-left: -40px;
+}
+
+.item-img{
+    /* clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 15% 50%, 0% 0%);
+    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%); */
+    /* border-radius: 100px 10px; */
+}
+
+/* headline */
+
+.headline-w{
+    background: linear-gradient(to right, rgba(255,255,255,1),rgba(255,255,255,1) 25%,rgba(255,255,255,0) 75%,rgba(255,255,255,0)); 
+}
+
+.headline-t{
+    background: linear-gradient(to right, rgba(255,255,255,0),rgba(255,255,255,0) 25%,rgba(255,255,255,1) 75%,rgba(255,255,255,1)); 
+}
+
+/* works */
+
+#works {
+    background-color: white;
+}
+
+#works, #myself {
+    /* height: 100vh; */
+}
+
+/* education */
+
+#education {
+    /* height: 40vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* myself */
+
+#myself {
+    background-color:white;
+}
+
+#myself .myself-title {
+    /* height: 100vh; */
+    padding: 0;
+    position: relative;
+}
+
+/* .myself-title{
+    position: absolute;
+} */
+
+
+.myself-title input {
+   height: 100%;
+   width: 100%;
+   background-size: cover;
+   filter: grayscale(100%);
+}
+
+.myself-title:hover input {
+    transition-duration: 1s;
+    filter: grayscale(0%);
+}
+
+input:focus {
+    outline: none;
+}
+
+/* myself-content */
+
+#myself-about{
+    
+}
+
+#myself-study{
+    
+}
+
+
+#myself-active{
+    
+}
+
+
+#myself-future{
+    
+}
+
+#myself-about,#myself-study,#myself-active,#myself-future{
+    display: none; 
+}
+
+/* footer */
+
+footer {
+    background-color: #fff;
+}
+
+@media screen and (max-width:992px){
+    #header-photo, .header-content {
+        margin-top: 0;
+    }
+
+    #header-photo{
+       
+    }
+
+    .header-content {
+        height:auto;
+    }
+
+    #header-items{
+        margin-left: -20px;
+    }
+
+    #myself-about,#myself-study,#myself-active,#myself-future{
+        display: inline; 
+    }
+    
+    input{
+        display: none;
+    }
+}
+
+/* option */
+.show{
+    display: inline!important; 
+}
+
+.select{
+    position: absolute;
+    filter: grayscale(0%)!important;
+    box-shadow:0 0 10px black;
+    z-index: 4!important;
+}

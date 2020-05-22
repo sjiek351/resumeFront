@@ -1,245 +1,122 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <script src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
     <title>我的履歷</title>
-    <style>
-        body {
-            font-family: SimHei, Microsoft JhengHei, serif;
-        }
 
-        #about {
-            height: 100vh;
-            position: fixed;
-            box-shadow: 5px 0px 20px black;
-            z-index: 1;
-        }
+    <link rel="stylesheet" type="text/css" href="layout.css">
 
-        #photo {
-            height: 20vh;
-        }
-
-        #people {
-            background-image: url(https://picsum.photos/400/400);
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            height: 54vh;
-        }
-
-        p {
-            word-spacing: 0.5rem;
-        }
-
-        h4 {
-            margin: 1rem auto;
-        }
-
-        h4,
-        i {
-            color: #26626B;
-        }
-
-        .message {
-            vertical-align: super;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        /*媒體查詢*/
-        /* 大螢幕 */
-        @media screen and (min-width: 992px) {
-            #about {
-                clip-path: polygon(0 0, 100% 0, 100% 57%, 90% 70%, 95% 72%, 85% 85%, 90% 87%, 80% 100%, 0% 100%);
-            }
-
-            #people {
-                margin-bottom: 2vh;
-            }
-
-            .asideimg {
-                max-width: 100%;
-                filter: brightness(.5);
-            }
-
-            .item:hover .asideimg {
-                transition-duration: 1s;
-                filter: brightness(1);
-            }
-
-            .item {
-                margin-top: 1vh;
-                margin-bottom: 1vh;
-                height: 13vh;
-                overflow: hidden;
-                position: relative;
-
-            }
-
-            .item .asidet {
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 2rem;
-                display: flex;
-                justify-content: left;
-                align-items: center;
-            }
-
-            .asidet {
-                text-shadow: 2px 2px #333;
-
-            }
-
-            .bgbl {
-                background-color: #eee;
-            }
-
-            .bgw {
-                background-color: white;
-            }
-
-            .card {
-                width: 20rem;
-            }
-        }
-
-        /* 小螢幕 */
-        @media screen and (max-width: 992px) {
-            #about {
-                position: static;
-                height: 20vh;
-            }
-
-            #photo {
-                height: 13vh;
-            }
-
-            #people {
-                height: 20vh;
-            }
-
-            .item {
-                display: none;
-            }
-
-            #myinfo {
-                text-align: center;
-            }
-
-            main {
-                background: url(images/book-t.jpg), url(images/book-b.jpg), url(images/book-m2.jpg);
-                background-size: 100%, 100%, 100%;
-                background-position-y: top, bottom, center;
-                background-repeat: no-repeat, no-repeat, repeat-y;
-            }
-
-            .card {
-                max-width: 100vw;
-            }
-        }
-    </style>
 
 </head>
 
 <body>
-    <div class="container-fluid">
+    <header class="container text-light my-3">
         <div class="row">
-            <!-- 左側欄 -->
-            <header class="col-lg-3" id="about">
-                <div class="asidebar">
-                    <div class="row align-items-center justify-content-center" id="people">
-                        <div class="text-center">
-                            <a href="#myinfo">
-                                <img class="rounded-circle my-2" id="photo" src="images/me.jpg" alt=""></a>
-                            <p class="text-light">興趣沒有目的，興趣本身就是目的</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="asidebar">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="item text-center" id="it-project">
-                            <a href="#project">
-                                <img class="asideimg" src="https://picsum.photos/400/200?random=5">
-                                <h3 class="asidet text-light"><b>- 作品 </b></h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="asidebar">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="item text-center" id="it-back">
-                            <a href="#back">
-                                <img class="asideimg" src="images/back.jpg">
-                                <h3 class="asidet text-light"><b>- 學歷 </b></h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="asidebar">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="item text-center" id="it-myself">
-                            <a href="#myself">
-                                <img class="asideimg" src="images/myself.jpg">
-                                <h3 class="asidet text-light"><b>- 自傳 </b></h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </header>
-        </div>
-    </div>
-    <!-- 主欄 -->
-    <main>
-        <article class="bgw">
-            <section class="container ection-index" id="myinfo">
-                <div class="row">
-                    <div class="offset-lg-3 col-lg-9">
-                        <br />
-                        <div class="col-lg">
-                            <h2><b>崔永昀</b></h2>
-                            <p>
-                                1997.11.2 | 役畢(2020.3)<br />
-                                2019應屆畢業於國立東華大學<br /><br />
-                                <a href="https://github.com/sjiek351" target="_blank"><i
-                                        class="fab fa-github-square fa-2x"></i></a>
-                                <a href="https://www.facebook.com/profile.php?id=100000409191287" target="_blank"><i
-                                        class="fab fa-facebook-square fa-2x"></i></a>
-                                <br />
-                            <div class="row">
-                                <div class="col-lg">
-                                    <a href="tel:0909402650"><i class="fas fa-phone fa-2x"></i><span class="message">
-                                            0909-402-650</span></a>
-                                </div>
-                                <div class="col-lg">
-                                    <a href="mailto:sjiek351@gmail.com"><i class="fas fa-at fa-2x"></i><span
-                                            class="message">
-                                            sjiek351@gmail.com</span></a>
-                                </div>
-                            </div>
-                            </p>
-                        </div>
-                        <div class="col-lg">
+            <div id="header-photo" class="col-lg-3 text-center  my-3">
+                <img class="rounded-circle" id="photo" src="images/me.jpg" alt="">
+                <h2 class="my-3"><b>崔永昀</b></h2>
+                <small>興趣沒有目的，興趣本身就是目的</small>
+            </div>
 
-                        </div>
-                    </div>
-                </div>
+            <div id="header-name" class="col-lg-3 order-4 text-center">
+                <a class="text-light" href="https://github.com/sjiek351" target="_blank"><i
+                        class="fab fa-github-square fa-2x"></i> </a>
+                <a class="text-light" href="https://www.facebook.com/profile.php?id=100000409191287" target="_blank"><i
+                        class="fab fa-facebook-square fa-2x"></i></a>
+            </div>
+
+            <div class="col-lg-3 order-1 header-content text-center">
+                <p>
+                    1997.11.2 | 役畢 ( 2020.3 ) <br />
+                    2019應屆畢業於國立東華大學<br /><br />
+                    <a class="text-light" href="tel:0909402650"><i class="fas fa-phone"></i><span class="message">
+                            0909-402-650</span></a><br />
+
+                    <a class="text-light" href="mailto:sjiek351@gmail.com"><i class="fas fa-at"></i><span
+                            class="message">
+                            sjiek351@gmail.com</span></a>
+
+                </p>
+            </div>
+
+            <div class="col-lg-3 order-2 header-content">
+                <h3>| 技能</h3>
                 <hr />
-            </section>
-        </article>
+                語言
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>JAVA</li>
+                </ul>
+                框架
+                <ul>
+                    <li>Bootstrap</li>
+                    <li>JQuery</li>
+                </ul>
+            </div>
 
-        <article class="bgbl">
+            <div class="col-lg-3 order-3 header-content">
+                <h3>| 工具</h3>
+                <hr />
+                編譯器
+                <ul>
+                    <li>Visual Studio Code</li>
+                    <li>Dreamweaver</li>
+                    <li>NetBeans</li>
+                </ul>
+                其他
+                <ul>
+                    <li>Chrome DevTools</li>
+                    <li>Github</li>
+                    <li>Photoshop CC</li>
+                    <li>Office軟體</li>
+                </ul>
+            </div>
+
+            <div id="header-items" class="col-lg-9 order-5 text-center">
+                <div id="item-works" class="item">
+                    <a href="#works-head">
+                        <img class="item-img" src="images/cat.png">
+                        <h3 class="item-text text-light"><b>- 作品</b></h3>
+                    </a>
+
+                </div>
+                <div id="item-edu" class="item">
+                    <a href="#education-head">
+                        <img class="item-img" src="images/back.jpg">
+                        <h3 class="item-text text-light"><b>- 學歷</b></h3>
+                    </a>
+
+                </div>
+                <div id="item-myself" class="item">
+                    <a href="#myself-head">
+                        <img class="item-img" src="images/myself.jpg">
+                        <h3 class="item-text text-light"><b>- 自傳</b></h3>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div id="works-head" class="headline-w container-fluid py-1">
+        <b>
+            <h3>| 作品</h3>
+        </b>
+    </div>
+
+    <div id="works" class="container-fluid">
+        <div class="row">
             <section class="container section-index" id="project">
-                <div class="row">
-                    <div class="offset-lg-3 col-lg-9">
-                        <h4>| 作品</h4>
+                <div class="row my-3">
+                    <div class="col-lg">
                         <!-- navs組件 頭 -->
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item">
@@ -256,7 +133,7 @@
                             <div class="tab-pane fade show active" id="front" role="tabpanel"
                                 aria-labelledby="front-tab">
                                 <div class="row my-3">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-7">
                                         <p>
                                         <h5>國立東華大學弓道社 社團網頁</h5><br />
                                         <ul>
@@ -281,7 +158,7 @@
                                         </ul>
                                         </p>
                                     </div>
-                                    <div class="col-lg-2">
+                                    <div class="col-lg-5">
                                         <div class="card">
                                             <img src="images/project1.png" class="card-img-top" alt="">
                                             <div class="card-body">
@@ -296,12 +173,12 @@
 
                             <div class="tab-pane fade" id="backwork" role="tabpanel" aria-labelledby="backwork-tab">
                                 <div class="row my-3">
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-5">
                                         <p>
                                         <h5>Java 8 國際證照 OCAJP</h5>
                                         </p>
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-7">
                                         <img src="images/OCAJP.jpg">
                                     </div>
                                 </div>
@@ -309,93 +186,146 @@
                         </div>
                     </div>
                 </div>
-                <hr />
             </section>
-        </article>
+        </div>
 
-        <article class="bgw">
-            <section class="container section-index" id="back">
-                <div class="row">
-                    <div class="offset-lg-3 col-lg-9">
-                        <h4>| 學歷</h4>
-                        <p>
-                            國立東華大學．應用數學系統計組．學士 - 2015~2019<br />
-                            臺北市立萬芳高中 - 2012~2015
-                        </p>
-                    </div>
+
+    </div>
+
+    <div id="education-head" class="headline-t text-light container-fluid py-1">
+        <b>
+            <h3>| 學歷</h3>
+        </b>
+    </div>
+
+    <div id="education" class="container-fluid text-light">
+        <div class="text-center  my-3">
+            <p>
+                國立東華大學．應用數學系統計組．學士 - 2015~2019<br />
+                臺北市立萬芳高中 - 2012~2015
+            </p>
+        </div>
+    </div>
+
+    <div id="myself-head" class="headline-w container-fluid py-1">
+        <b>
+            <h3>| 自傳</h3>
+        </b>
+    </div>
+
+    <div id="myself" class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-8">
+                <!-- <h4>| 自傳</h4><br /> -->
+
+                <div id="myself-about" class="container show">
+                    <h5>【關於我】</h5>
+                    <p>出生於1997年，來自新北市永和區，2019年6月畢業於國立東華大學應用數學系，為應屆畢業生。
+
+                        <br /><br />數學系統計組出身的我，擅長精密的思考與嚴謹的邏輯推導，遇到難題時會想要追根究底直到找出問題的邏輯性。
+
+                        <br /><br />在大學修課期間，我接觸很多種程式語言，因而對程式設計產生了濃厚的興趣，於是我決定從較多人使用的Java語言開始深入學習。
+
+                        <br /><br />畢業後，我報名補習班的程式課程，以學習完整的程式語言架構，在服兵役期間，我也不忘充實自己，看書自學前端語言，假日實作網站頁面，期望自己能具有進入資訊業的實力，役畢後接續未完成的課程，並協助母校弓道社建立社團網頁。
+                    </p>
+                    <br />
                 </div>
-                <hr />
-            </section>
-        </article>
 
-        <article class="bgbl">
-            <section class="container section-index" id="myself">
-                <div class="row">
-                    <div class="offset-lg-3 col-lg-9">
-                        <h4>| 自傳</h4><br />
-                        <p>
-                        <h5>【關於我】</h5>
-                        <br />出生於1997年，來自新北市，國立東華大學應用數學系畢業，2019年應屆畢業生。
+                <div id="myself-study" class="container">
 
-                        <br /><br />身為數學系統計組的我，精密的思考與嚴謹的邏輯推導是我擅長之處，遇到難題時會想要刨根究底直到找出問題的邏輯性。
-
-                        <br /><br />在大學修課期間，我接觸過很多種程式語言，而寫程式深深吸引到我，於是我決定從較多人使用的Java語言開始深入學習。
-
-                        <br /><br />畢業後，我報名了補習班的程式課程，學習完整的程式語言架構，並在服兵役期間看書自學前端語言，假日實作網站頁面，役畢後協助東華大學弓道社建立社團網頁。
-                        </p>
-                        <br />
-                        <P>
-                        <h5>【學習經歷】</h5>
-                        <br />為了補足我在基礎方面的不熟悉，畢業後我報名了巨匠補習班的課程，目的在於更有效率的踏入程式領域，避免自學時因基礎不足而面臨窘境，而其餘時間則拿來自我練功，雙管齊下提升學習效益。
+                    <h5>【學習經歷】</h5>
+                    <p>為了補足我在基礎方面的不熟悉，畢業後我報名了巨匠補習班的課程，目的在於更有效率的踏入程式領域，避免自學時因基礎不足而面臨窘境，而其餘時間則拿來自我練功，雙管齊下提升學習效益。
                         <br /><br />
-                        <ul>
-                            <li>2019.09 , Java 先修基礎程式設計 - 30小時</li>
-                            <li>2019.10 , Java OCP JP 程式設計師認證班 - 108小時</li>
-                            <li>2020.04 , SQL Server資料庫概論 - 15小時</li>
-                            <li>2020.04 , Dreamweaver CC創意網頁設計 - 18小時 (學習中)</li>
-                            <li>2020.05 , Photoshop CC影像設計 - 18小時 (學習中)</li>
-                        </ul>
-                        </P>
-                        <br />
-                        <P>
-                        <h5>【活動經歷】</h5>
-                        <br />大二曾參與籌備社團校際營隊、全校新生入學活動、系上暑期營隊，磨練溝通、臨機應變與團隊合作的能力。
-
-                        <br /><br />大三擔任弓道社總務，運用office軟體管理社產，並於年度社團評鑑中拿下「優等」，鍛練資料管理與資訊統整的能力。
-                        </P>
-                        <br />
-                        <P>
-                        <h5>【未來規劃】</h5>
-                        <br />喜歡一個東西，就會想要更多。
-
-                        <br /><br />自從接觸前端語言之後，我時常會撰寫程式直到半夜，在學習的過程中認識到不同的函式庫與技術，都讓我在設計網頁時充滿了樂趣，「尋找最佳的程式碼」成了我每次寫程式的目標，而未來會繼續嘗試接觸更多類型的功能，並且發揮專長與經驗，為公司創造價值。
-
-                        <br /><br />我的遠期目標是成為一位全端工程師，為了實現這個目標，短期內，我會在任務完成之餘，運用所學創造超出預期的效果，下班時間持續學習框架與新技術，在一年之內晉升為程式設計師。接著，嘗試針對問題提供多個不同的解決方案，提出更符合需求的設計，為客戶打造最豐富的內容，然後按照公司願景繼續發展，希望我的加入可以給公司帶來更多的商業價值，同時讓自己的能力近一步提升。
-                        </p>
-                        <br />
-                    </div>
+                    <ul>
+                        <li>2019.09 , Java 先修基礎程式設計 - 30小時</li>
+                        <li>2019.10 , Java OCP JP 程式設計師認證班 - 108小時</li>
+                        <li>2020.04 , SQL Server資料庫概論 - 15小時</li>
+                        <li>2020.04 , Dreamweaver CC創意網頁設計 - 18小時</li>
+                        <li>2020.05 , Photoshop CC影像設計 - 18小時 (學習中)</li>
+                    </ul>
+                    </P>
+                    <br />
                 </div>
-                <hr />
-            </section>
 
-        </article>
-    </main>
+                <div id="myself-active" class="container">
+
+                    <h5>【社團經歷】</h5>
+                    <p>大二曾參與籌備社團校際營隊、全校新生入學活動、系上暑期營隊，過程中學到溝通、臨機應變與團隊合作的能力。
+
+                        <br /><br />大三擔任弓道社總務，運用office軟體管理社團財產，磨練資料管理與資訊統整的能力，並於年度社團評鑑中拿下「優等」。
+                    </P>
+                    <br />
+                </div>
+
+                <div id="myself-future" class="container">
+
+                    <h5>【未來規劃】</h5>
+                    <P>自從接觸前端語言之後，我時常會撰寫程式直到半夜，在學習的過程中認識到不同的函式庫與技術，都讓我在設計網頁時充滿了樂趣，「尋找最佳的程式碼」成為了我每次寫程式的目標，而未來會繼續接觸更多類型的功能，並且發揮專長與經驗，為公司創造最大的收益。
+
+                        <br /><br />我的未來目標是成為一位全端工程師，為了實現這個夢想，短期內，我會在任務完成之餘，運用所學創造超出預期的效果，閒暇時間持續學習框架與新技術，再根據過去學習Java的經驗迅速上手C#，在一年之內晉升為程式設計師。中程目標，嘗試針對問題提供多個不同的解決方案，提出更符合需求的設計，為客戶打造最豐富的內容，然後按照公司願景繼續發展，希望我的加入可以給公司帶來更多價值，成為公司的重要資產。
+                    </p>
+                    <br />
+                </div>
+
+            </div>
+
+            <div class="col-lg-1 myself-title">
+                <input id="title-about" class="select" type="image" src="https://picsum.photos/200/1000"
+                    onclick="show('about');" alt="" name="" />
+
+            </div>
+
+            <div class="col-lg-1 myself-title">
+                <input id="title-study" type="image" src="https://picsum.photos/200/1000" onclick="show('study');"
+                    alt="" name="" />
+
+            </div>
+
+            <div class="col-lg-1 myself-title">
+                <input id="title-active" type="image" src="https://picsum.photos/200/1000" onclick="show('active');"
+                    alt="" name="" />
+
+            </div>
+
+            <div class="col-lg-1 myself-title">
+                <input id="title-future" type="image" src="https://picsum.photos/200/1000" onclick="show('future');"
+                    alt="" name="" />
+
+            </div>
+
+        </div>
 
 
-    <footer>
+    </div>
+
+    <footer class="container-fluid">
+        <div class="row text-center">
+            <div class="col-lg">
+                &copy; Tsuei Yong-Yun
+            </div>
+        </div>
+
 
     </footer>
-    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <!-- script載入 -->
+    <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('.section-index').hide();
-            setTimeout(function () {
-                $('.section-index').slideDown(1000);
-            }, 000);
+            if ($(window).width() < 992) {
+                $('#header-name').removeClass('order-4');
+            }
         });
+        function show(n) {
+            $('#myself-about, #myself-study, #myself-active, #myself-future').removeClass('show');
+            $('#title-about, #title-study, #title-active, #title-future').removeClass('select');
+            $('#title-' + n).addClass('select');
+            $('#myself-' + n).addClass('show');
+        }
     </script>
+
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
 </body>
 
 </html>
