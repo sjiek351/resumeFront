@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(https://picsum.photos/200/300);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://picsum.photos/1000/800);
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     background-attachment: fixed, fixed;
@@ -14,22 +14,23 @@ a {
 }
 
 img{
+    width: 100%;
     max-width: 90vw;
 }
 
 /* header */
 
 header {
-    /* height: 100vh; */
+   
 }
 
 #header-photo, .header-content {
-    /* margin-top: 5%; */
+ 
     height: 60%;
 }
 
 #header-photo {
-    /* background-color: blue; */
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +57,6 @@ header {
 
 
 #header-items {
-    /* background-color: red; */
     display: flex;
 }
 
@@ -97,9 +97,7 @@ header {
 }
 
 .item-img{
-    /* clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 15% 50%, 0% 0%);
-    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%); */
-    /* border-radius: 100px 10px; */
+
 }
 
 /* headline */
@@ -119,13 +117,13 @@ header {
 }
 
 #works, #myself {
-    /* height: 100vh; */
+  
 }
 
 /* education */
 
 #education {
-    /* height: 40vh; */
+  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,7 +136,6 @@ header {
 }
 
 #myself .myself-title {
-    /* height: 100vh; */
     padding: 0;
     position: relative;
 }
