@@ -16,6 +16,9 @@
 
 <body>
     <header class="container text-light my-3">
+        <div id="top" class="text-center">
+            <a href="#header-photo"><i class="fas fa-angle-double-up fa-2x "></i></a>
+        </div>
         <div class="row">
             <div id="header-photo" class="col-lg-3 text-center  my-3">
                 <img class="rounded-circle" id="photo" src="images/me.jpg" alt="">
@@ -31,17 +34,24 @@
                         class="fab fa-facebook-square fa-2x"></i></a>
             </div>
 
-            <div class="col-lg-3 order-1 header-content text-center">
-                <p>
-                    1997.11.2 | 役畢 ( 2020.3 ) <br />
-                    2019應屆畢業於國立東華大學<br /><br />
-                    <a class="text-light" href="tel:0909402650"><i class="fas fa-phone"></i><span class="message">
-                            0909-402-650</span></a><br />
+            <div class="col-lg-3 order-1 header-content text-center my-3">
+                <p class="border my-2">
+                    生於1997年11月<br />
+                    2019.06 畢業於國立東華大學<br />
+                    2020.03 常備役結訓<br /><br />
 
-                    <a class="text-light" href="mailto:sjiek351@gmail.com"><i class="fas fa-at"></i><span
-                            class="message">
-                            sjiek351@gmail.com</span></a>
+                    <a class="text-light" href="104_Tsuei.pdf" target="_blank"><i class="fas fa-file-pdf"></i> 104
+                        履歷表</a><br />
+                    <a class="text-light" href="tel:0909402650"><i class="fas fa-phone"></i>
+                        0909-402-650</a><br />
 
+                    <a class="text-light" href="mailto:sjiek351@gmail.com"><i class="fas fa-envelope"></i>
+
+                        sjiek351@gmail.com</a>
+                </p>
+                <br />
+                <p>以下是我所擁有的:<br />
+                    <a class="text-light" href="#">證書、證照</a>
                 </p>
             </div>
 
@@ -84,21 +94,21 @@
                 <div id="item-works" class="item">
                     <a href="#works-head">
                         <img class="item-img" src="images/cat.png">
-                        <h3 class="item-text text-light"><b>- 作品</b></h3>
+                        <h3 class="item-text text-light"><b>作品</b></h3>
                     </a>
 
                 </div>
                 <div id="item-edu" class="item">
                     <a href="#education-head">
                         <img class="item-img" src="images/back.jpg">
-                        <h3 class="item-text text-light"><b>- 學歷</b></h3>
+                        <h3 class="item-text text-light"><b>學歷</b></h3>
                     </a>
 
                 </div>
                 <div id="item-myself" class="item">
                     <a href="#myself-head">
                         <img class="item-img" src="images/myself.jpg">
-                        <h3 class="item-text text-light"><b>- 自傳</b></h3>
+                        <h3 class="item-text text-light"><b>自傳</b></h3>
                     </a>
 
                 </div>
@@ -134,7 +144,7 @@
                             <div class="tab-pane fade show active" id="front" role="tabpanel"
                                 aria-labelledby="front-tab">
                                 <!-- 網頁1 -->
-                                <div class="row my-3">                
+                                <div class="row my-3">
                                     <div class="col-lg-6">
                                         <div class="card">
                                             <h5 class="card-header">Timothy Hotel 蒂莫絲旅館</h5>
@@ -159,25 +169,25 @@
                                                         插入 Google Fonts 、 Font Awesome 小元件豐富網站
                                                     </li>
                                                 </ul>
-                                                
+
                                                 <a href="https://sjiek351.github.io/TimothyHotel/"
-                                                    class="btn btn-primary" target="_blank">前往</a>
+                                                    class="btn btn-primary" target="_blank">前往Timothy</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <img src="images/kyudo_rwd.png" alt="">
+                                    <div class="col-lg-6 my-2">
+                                        <img src="images/timothy_rwd.png" alt="">
                                     </div>
                                 </div>
                                 <hr />
                                 <!-- 網頁2 -->
                                 <div class="row my-3">
-                                    <div class="col-lg-6 order-2">
+                                    <div id="page2-content" class="col-lg-6 order-2">
                                         <div class="card">
                                             <h5 class="card-header">國立東華大學弓道社 社團網頁</h5>
                                             <div class="card-body">
                                                 <ul class="card-text">
-                                                
+
                                                     <li>
                                                         使用 Visual Studio Code 編譯
                                                     </li>
@@ -197,13 +207,13 @@
                                                         插入 Google Fonts 、 Font Awesome 小元件豐富網站
                                                     </li>
                                                 </ul>
-                                                
+
                                                 <a href="https://sjiek351.github.io/KyudoClub/project1/front.html"
-                                                    class="btn btn-primary" target="_blank">前往</a>
+                                                    class="btn btn-primary" target="_blank">前往弓道社</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 order-1">
+                                    <div id="page2-img" class="col-lg-6 order-1 my-2">
                                         <img src="images/kyudo_rwd.png" alt="">
                                     </div>
                                 </div>
@@ -212,12 +222,13 @@
 
                             <div class="tab-pane fade" id="backwork" role="tabpanel" aria-labelledby="backwork-tab">
                                 <div class="row my-3">
-                                    <div class="col-lg-5">
-                                        <p>
+                                    <div class="col-lg-6">
                                         <h5>Java 8 國際證照 OCAJP</h5>
+                                        <p><a href="https://drive.google.com/open?id=1nZs2C0dUk2zXGWmJk3IDAq4ineWewz7N"
+                                                target="_blank">OCAJP崔永昀.pdf</a>
                                         </p>
                                     </div>
-                                    <div class="col-lg-7">
+                                    <div class="col-lg-6">
                                         <img src="images/OCAJP.jpg">
                                     </div>
                                 </div>
@@ -316,20 +327,20 @@
             </div>
 
             <div class="col-lg-1 myself-title">
-                <input id="title-study" type="image" src="https://picsum.photos/200/1000" onclick="show('study');"
-                    alt="" name="" />
+                <input id="title-study" type="image" src="images/title-study.jpg" onclick="show('study');" alt=""
+                    name="" />
 
             </div>
 
             <div class="col-lg-1 myself-title">
-                <input id="title-active" type="image" src="https://picsum.photos/200/1000" onclick="show('active');"
-                    alt="" name="" />
+                <input id="title-active" type="image" src="images/title-active.jpg" onclick="show('active');" alt=""
+                    name="" />
 
             </div>
 
             <div class="col-lg-1 myself-title">
-                <input id="title-future" type="image" src="https://picsum.photos/200/1000" onclick="show('future');"
-                    alt="" name="" />
+                <input id="title-future" type="image" src="images/title-future.jpg" onclick="show('future');" alt=""
+                    name="" />
 
             </div>
 
@@ -340,7 +351,7 @@
 
     <footer class="container-fluid">
         <div class="row text-center">
-            <div class="col-lg">
+            <div class="col-lg text-light">
                 &copy; Tsuei Yong-Yun
             </div>
         </div>
@@ -352,8 +363,13 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            if ($(window).width() < 992) {
+            if ($(window).width() < 992 && $('input').is(':hidden')) {
+                // 移除排序
+                // github,fb
                 $('#header-name').removeClass('order-4');
+                // github,fb
+                $('#page2-content').removeClass('order-2');
+                $('#page2-img').removeClass('order-1');
             }
         });
         function show(n) {
@@ -364,6 +380,7 @@
         }
     </script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
 </body>
 
