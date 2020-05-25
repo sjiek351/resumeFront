@@ -35,14 +35,11 @@ img {
 
 /* set hint color */
 #top i{
-    color: #b1f8e8;
+    color: white;
 }
 
 
-.btn{
-    background-color: #b1f8e8;
-    color: rgb(0, 123, 255);
-}
+
 
 
 /* header */
@@ -63,10 +60,6 @@ header {}
 #photo {
     width: 70%;
     max-width: 40vw;
-}
-
-.bord{
-    border:white 1px solid;
 }
 
 .header-content {
@@ -145,7 +138,10 @@ header {}
     background-color: white;
 }
 
-#works, #myself {}
+.btn{
+    background-color: #b1f8e8;
+    color: rgb(0, 123, 255);
+}
 
 /* education */
 
@@ -161,14 +157,13 @@ header {}
     background-color: white;
 }
 
-#myself .myself-title {
-    padding: 0;
-    position: relative;
+#myself p{
+    text-indent: 2.2rem;
 }
 
-/* .myself-title{
-    position: absolute;
-} */
+#myself .myself-title {
+    padding: 0;
+}
 
 .myself-title input {
     height: 100%;
@@ -188,13 +183,7 @@ input:focus {
 
 /* myself-content */
 
-#myself-about {}
 
-#myself-study {}
-
-#myself-active {}
-
-#myself-future {}
 
 #myself-about, #myself-study, #myself-active, #myself-future {
     display: none;
@@ -237,3 +226,4 @@ footer {
     box-shadow: 0 0 10px black;
     z-index: 4!important;
 }
+
