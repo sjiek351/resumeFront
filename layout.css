@@ -27,7 +27,7 @@ img {
     height: 40px;
     border-radius: 50%;
     position: fixed;
-    top: 15px;
+    bottom: 15px;
     right: 15px;
     z-index: 20;
 }
@@ -227,3 +227,6 @@ footer {
     z-index: 4!important;
 }
 
+.pointer{
+    cursor: pointer;
+}

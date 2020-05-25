@@ -17,7 +17,9 @@
 <body>
     <header class="container text-light my-3">
         <div id="top" class="text-center">
-            <a href="#header-photo"><i class="fas fa-angle-double-up fa-2x "></i></a>
+            <!-- <a href="#header-photo"> -->
+                <i class="fas fa-angle-double-up fa-2x pointer"></i>
+            <!-- </a> -->
         </div>
         <div class="row">
             <div id="header-photo" class="col-lg-3 text-center  my-3">
@@ -91,25 +93,25 @@
             </div>
 
             <div id="header-items" class="col-lg-9 order-5 text-center">
-                <div id="item-works" class="item">
-                    <a href="#works-head">
-                        <img class="item-img" src="images/cat.png">
-                        <h3 class="item-text text-light"><b>作品</b></h3>
-                    </a>
+                <div id="item-works" class="item pointer" onclick="scrollTop('works')">
+                    <!-- <a href="#works-head"> -->
+                    <img class="item-img" src="images/cat.png">
+                    <h3 class="item-text text-light"><b>作品</b></h3>
+                    <!-- </a> -->
 
                 </div>
-                <div id="item-edu" class="item">
-                    <a href="#education-head">
-                        <img class="item-img" src="images/back.jpg">
-                        <h3 class="item-text text-light"><b>學歷</b></h3>
-                    </a>
+                <div id="item-edu" class="item pointer" onclick="scrollTop('#education-head')">
+                    <!-- <a href="#education-head"> -->
+                    <img class="item-img" src="images/back.jpg">
+                    <h3 class="item-text text-light"><b>學歷</b></h3>
+                    <!-- </a> -->
 
                 </div>
-                <div id="item-myself" class="item">
-                    <a href="#myself-head">
-                        <img class="item-img" src="images/myself.jpg">
-                        <h3 class="item-text text-light"><b>自傳</b></h3>
-                    </a>
+                <div id="item-myself" class="item pointer" onclick="scrollTop('#myself-head')">
+                    <!-- <a href="#myself-head"> -->
+                    <img class="item-img" src="images/myself.jpg">
+                    <h3 class="item-text text-light"><b>自傳</b></h3>
+                    <!-- </a> -->
 
                 </div>
             </div>
@@ -315,9 +317,11 @@
                         <div id="myself-future" class="col-lg">
 
                             <h5>【未來規劃】</h5>
-                            <P>自從接觸前端語言之後，我時常會撰寫程式直到半夜，在學習的過程中認識到不同的函式庫與技術，都讓我在設計網頁時充滿了樂趣，「尋找最佳的程式碼」成為了我每次寫程式的目標，而未來會繼續接觸更多類型的功能，並且發揮專長與經驗，為公司創造最大的收益。</P>
+                            <P>自從接觸前端語言之後，我時常會撰寫程式直到半夜，在學習的過程中認識到不同的函式庫與技術，都讓我在設計網頁時充滿了樂趣，「尋找最佳的程式碼」成為了我每次寫程式的目標，而未來會繼續接觸更多類型的功能，並且發揮專長與經驗，為公司創造最大的收益。
+                            </P>
 
-                                <br /><p>我的未來目標是成為一位全端工程師，為了實現這個夢想，短期內，我會在任務完成之餘，運用所學創造超出預期的效果，閒暇時間持續學習框架與新技術，再根據過去學習Java的經驗迅速上手C#，在一年之內晉升為程式設計師。中程目標，嘗試針對問題提供多個不同的解決方案，提出更符合需求的設計，為客戶打造最豐富的內容，然後按照公司願景繼續發展，希望我的加入可以給公司帶來更多價值，成為公司的重要資產。
+                            <br />
+                            <p>我的未來目標是成為一位全端工程師，為了實現這個夢想，短期內，我會在任務完成之餘，運用所學創造超出預期的效果，閒暇時間持續學習框架與新技術，再根據過去學習Java的經驗迅速上手C#，在一年之內晉升為程式設計師。中程目標，嘗試針對問題提供多個不同的解決方案，提出更符合需求的設計，為客戶打造最豐富的內容，然後按照公司願景繼續發展，希望我的加入可以給公司帶來更多價值，成為公司的重要資產。
                             </p>
                             <br />
                         </div>
@@ -377,6 +381,26 @@
                 $('#page2-img').removeClass('order-1');
             }
         });
+        //錨點捲動
+        {
+            $('#top').click(function () {
+                $('html, body').animate({scrollTop: 0}, 500);
+                });
+
+            $('#item-works').click(function () {
+                $('html, body').animate({scrollTop: $('#works-head').offset().top}, 500);
+            });
+
+            $('#item-edu').click(function () {
+                $('html, body').animate({scrollTop: $('#education-head').offset().top}, 500);
+            });
+
+            $('#item-myself').click(function () {
+                $('html, body').animate({scrollTop: $('#myself-head').offset().top}, 500);
+            });
+        }
+
+
         function show(n) {
             $('#myself-about, #myself-study, #myself-active, #myself-future').removeClass('show');
             $('#title-about, #title-study, #title-active, #title-future').removeClass('select');
