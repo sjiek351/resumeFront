@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/webp/background.webp);
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     background-attachment: fixed, fixed;
@@ -32,15 +32,11 @@ img {
     z-index: 20;
 }
 
-
 /* set hint color */
-#top i{
+
+#top i {
     color: white;
 }
-
-
-
-
 
 /* header */
 
@@ -57,7 +53,7 @@ header {}
     justify-content: center;
 }
 
-#photo {
+.photo {
     width: 70%;
     max-width: 40vw;
 }
@@ -83,13 +79,13 @@ header {}
 }
 
 .item-img {
-    max-height: 15%;
+    /* max-height: 15%; */
     width: 100%;
     filter: brightness(.7);
+    transition-duration: 1s;
 }
 
 .item:hover .item-img {
-    transition-duration: 1s;
     filter: brightness(1);
 }
 
@@ -107,7 +103,8 @@ header {}
 /* 偏移 */
 
 #item-works, #item-edu, #item-myself {
-    clip-path: polygon(95% 0, 95% 10%, 91% 10%, 91% 20%, 100% 20%, 100% 25%, 87% 25%, 87% 40%, 90% 40%, 90% 50%, 85% 50%, 85% 55%, 100% 55%, 100% 65%, 93% 65%, 93% 76%, 96% 76%, 96% 82%, 88% 82%, 88% 92%, 85% 92%, 85% 100%,/*鏡像*/0 100%, 0 92%, 3% 92%, 3% 82%, 11% 82%, 11% 76%, 8% 76%, 8% 65%, 15% 65%, 15% 55%, 0 55%, 0 50%, 5% 50%, 5% 40%, 2% 40%, 2% 25%, 15% 25%, 15% 20%, 6% 20%, 6% 10%, 10% 10%, 10% 0);
+    clip-path: polygon(95% 0, 95% 10%, 91% 10%, 91% 20%, 100% 20%, 100% 25%, 87% 25%, 87% 40%, 90% 40%, 90% 50%, 85% 50%, 85% 55%, 100% 55%, 100% 65%, 93% 65%, 93% 76%, 96% 76%, 96% 82%, 88% 82%, 88% 92%, 85% 92%, 85% 100%, /*鏡像*/
+    0 100%, 0 92%, 3% 92%, 3% 82%, 11% 82%, 11% 76%, 8% 76%, 8% 65%, 15% 65%, 15% 55%, 0 55%, 0 50%, 5% 50%, 5% 40%, 2% 40%, 2% 25%, 15% 25%, 15% 20%, 6% 20%, 6% 10%, 10% 10%, 10% 0);
     margin-right: -40px;
 }
 
@@ -119,7 +116,7 @@ header {}
 
 /* headline */
 
-.headline-w img, .headline-t img{
+.headline-w img, .headline-t img {
     max-height: 100%;
     width: auto;
 }
@@ -134,21 +131,44 @@ header {}
 
 /* works */
 
-#works {
+#works, .btn {
     background-color: white;
 }
 
-.btn{
-    background-color: #b1f8e8;
+.btn {
     color: rgb(0, 123, 255);
 }
 
 /* education */
 
-#education {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#education .time, .time-now {
+    margin: 0 20%;
+    padding: 0 10%;
+    position: relative;
+}
+
+.time::before, .time-now::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 1px;
+    background-color: rgb(172, 172, 172);
+}
+
+.time-now::before {
+    top: 14.334px;
+}
+
+.time::after, .time-now::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 8.834px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: rgb(172, 172, 172);
 }
 
 /* myself */
@@ -157,7 +177,7 @@ header {}
     background-color: white;
 }
 
-#myself p{
+#myself p {
     text-indent: 2.2rem;
 }
 
@@ -170,10 +190,10 @@ header {}
     width: 100%;
     background-size: cover;
     filter: grayscale(100%);
+    transition-duration: 1s;
 }
 
 .myself-title:hover input {
-    transition-duration: 1s;
     filter: grayscale(0%);
 }
 
@@ -182,8 +202,6 @@ input:focus {
 }
 
 /* myself-content */
-
-
 
 #myself-about, #myself-study, #myself-active, #myself-future {
     display: none;
@@ -196,16 +214,22 @@ footer {
 }
 
 @media (max-width:991.98px) {
+    /* header */
     #header-photo, .header-content {
         margin-top: 0;
     }
-    #header-photo {}
     .header-content {
         height: auto;
     }
     #header-items {
         display: none;
     }
+    /* education */
+    #education .time, .time-now {
+        margin: 0 5%;
+        padding: 0 5%;
+    }
+    /* myself */
     #myself-about, #myself-study, #myself-active, #myself-future {
         display: inline;
     }
@@ -227,6 +251,19 @@ footer {
     z-index: 4!important;
 }
 
-.pointer{
+.pointer {
     cursor: pointer;
+}
+
+#loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    z-index: 10;
 }
