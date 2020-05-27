@@ -5,7 +5,7 @@ body {
     background-attachment: fixed, fixed;
     background-position: center, center;
     /*  */
-    font-size: larger;
+    font-size: 1.2rem; 
     font-family: 'Noto Serif TC', serif;
     /*  */
 }
@@ -29,7 +29,7 @@ img {
     position: fixed;
     bottom: 15px;
     right: 15px;
-    z-index: 20;
+    z-index: 3;
 }
 
 /* set hint color */
@@ -171,6 +171,10 @@ header {}
     background-color: rgb(172, 172, 172);
 }
 
+.time-now{
+    padding-bottom: 1rem;
+}
+
 /* myself */
 
 #myself {
@@ -178,7 +182,8 @@ header {}
 }
 
 #myself p {
-    text-indent: 2.2rem;
+    text-indent: 2.8rem;
+    letter-spacing: .2rem;
 }
 
 #myself .myself-title {
@@ -229,6 +234,10 @@ footer {
         margin: 0 5%;
         padding: 0 5%;
     }
+
+    .time-now {
+     padding-bottom: 1rem;
+    }
     /* myself */
     #myself-about, #myself-study, #myself-active, #myself-future {
         display: inline;
@@ -248,7 +257,7 @@ footer {
     position: absolute;
     filter: grayscale(0%)!important;
     box-shadow: 0 0 10px black;
-    z-index: 4!important;
+    z-index: 2!important;
 }
 
 .pointer {
@@ -265,5 +274,5 @@ footer {
     align-items: center;
     justify-content: center;
     background: white;
-    z-index: 10;
+    z-index: 4;
 }
