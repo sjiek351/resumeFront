@@ -34,12 +34,44 @@
         </div>
     </div>
 
-    <!-- <div class="section-index"> -->
-    <header class="container text-light my-3">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <a class="navbar-brand" href="#">崔永昀</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <span id="nav-works" class="nav-link pointer">作品</span>
+                </li>
+                <li class="nav-item">
+                    <span id="nav-edu" class="nav-link pointer">學歷</span>
+                </li>
+                <li class="nav-item">
+                    <span id="nav-myself" class="nav-link pointer">自傳</span>
+                </li>
+            </ul>
+            <span class="navbar-text">
 
-        <div id="top" class="text-center fade-third">
-            <i class="fas fa-angle-double-up fa-2x pointer"></i>
+                <a class="text-light" href="https://github.com/sjiek351" target="_blank"><i
+                        class="fab fa-github fa-lg"></i> </a>
+                &nbsp;&nbsp;
+                <a class="text-light" href="https://www.facebook.com/profile.php?id=100000409191287" target="_blank"><i
+                        class="fab fa-facebook-f  fa-lg"></i></a>
+                &nbsp;&nbsp;
+                <a class="text-light"
+                    href="https://drive.google.com/drive/folders/1GiHBIEAhsf3c2ekJd-kp80EUFOtLjvjp?usp=sharing"
+                    target="_blank"><i class="fab fa-google-drive fa-lg"></i></a>
+                &nbsp;&nbsp;
+                <span id="top" class="text-center">
+                    <i class="fas fa-angle-double-up pointer fa-lg"></i>
+                </span>
+            </span>
         </div>
+    </nav>
+
+    <header class="container text-light my-3">
 
         <div class="row">
             <div id="header-photo" class="col-lg-3 text-center my-3 fade-first">
@@ -114,6 +146,7 @@
                 其他
                 <ul>
                     <li>Chrome DevTools</li>
+                    <li>PageSpeed Insights</li>
                     <li>Github</li>
                     <li>Photoshop CC</li>
                     <li>Office軟體</li>
@@ -121,14 +154,14 @@
             </div>
 
             <div id="header-items" class="col-lg-9 order-5 text-center fade-third">
-                <div id="item-works" class="item pointer" onclick="scrollTop('works')">
+                <div id="item-works" class="item pointer">
                     <picture>
                         <source class="item-img" srcset="images/webp/cat.webp" type="image/webp">
                         <img class="item-img" src="images/cat.png">
                     </picture>
                     <h3 class="item-text text-light"><b>作品</b></h3>
                 </div>
-                <div id="item-edu" class="item pointer" onclick="scrollTop('#education-head')">
+                <div id="item-edu" class="item pointer">
                     <picture>
                         <source class="item-img" srcset="images/webp/back.webp" type="image/webp">
                         <img class="item-img" src="images/back.jpg">
@@ -136,7 +169,7 @@
                     <h3 class="item-text text-light"><b>學歷</b></h3>
 
                 </div>
-                <div id="item-myself" class="item pointer" onclick="scrollTop('#myself-head')">
+                <div id="item-myself" class="item pointer">
                     <picture>
                         <source class="item-img" srcset="images/webp/myself.webp" type="image/webp">
                         <img class="item-img" src="images/myself.jpg">
@@ -174,7 +207,51 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="front" role="tabpanel"
                                 aria-labelledby="front-tab">
-                                <!-- 網頁1 -->
+                                <!-- 網頁3 -->
+                                <div class="row my-3">
+                                    <div id="page3-content" class="col-lg-6 order-2">
+                                        <div class="card">
+                                            <h5 class="card-header">個人網站</h5>
+                                            <div class="card-body">
+                                                <ul class="card-text">
+                                                    
+                                                    <li>
+                                                        Visual Studio Code 編譯
+                                                    </li>
+                                                    <li>
+                                                        HTML5、CSS3 基本設計
+                                                    </li>
+                                                    <li>
+                                                        Bootstrap 框架規劃響應式網頁 (RWD) 版型
+                                                    </li>
+                                                    <li>
+                                                        使用 JavaScript 互動插件
+                                                    </li>
+                                                    <li>
+                                                        JavaScript、jQuery 製作特效
+                                                    </li>
+                                                    <li>
+                                                        Google Fonts 、 Font Awesome 小元件豐富網站
+                                                    </li>
+                                                    <li>
+                                                        PageSpeed Insights 分
+                                                    </li>
+                                                </ul>
+
+                                                <a 
+                                                    class="btn btn-light">此網站</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="page3-img" class="col-lg-6 order-1 my-2">
+                                        <picture>
+                                            <source class="lazyload" srcset="images/webp/timothy_rwd.webp"
+                                                type="image/webp">
+                                            <img class="lazyload" data-src="images/timothy_rwd.png" alt=""></picture>
+                                    </div>
+                                </div>
+                                <hr />
+                                <!-- 網頁2 -->
                                 <div class="row my-3">
                                     <div class="col-lg-6">
                                         <div class="card">
@@ -182,7 +259,7 @@
                                             <div class="card-body">
                                                 <ul class="card-text">
                                                     <li>
-                                                        使用 Dreamweaver 編譯
+                                                        Dreamweaver 編譯
                                                     </li>
                                                     <li>
                                                         HTML5、CSS3 基本設計
@@ -197,7 +274,7 @@
                                                         JavaScript、jQuery 製作按鈕變換
                                                     </li>
                                                     <li>
-                                                        插入 Google Fonts 、 Font Awesome 小元件豐富網站
+                                                        Google Fonts 、 Font Awesome 小元件豐富網站
                                                     </li>
                                                 </ul>
 
@@ -214,16 +291,16 @@
                                     </div>
                                 </div>
                                 <hr />
-                                <!-- 網頁2 -->
+                                <!-- 網頁1 -->
                                 <div class="row my-3">
-                                    <div id="page2-content" class="col-lg-6 order-2">
+                                    <div id="page1-content" class="col-lg-6 order-2">
                                         <div class="card">
                                             <h5 class="card-header">國立東華大學弓道社 社團網頁</h5>
                                             <div class="card-body">
                                                 <ul class="card-text">
 
                                                     <li>
-                                                        使用 Visual Studio Code 編譯
+                                                        Visual Studio Code 編譯
                                                     </li>
                                                     <li>
                                                         HTML5、CSS3 基本設計
@@ -235,10 +312,10 @@
                                                         使用Bootstrap JS 互動插件
                                                     </li>
                                                     <li>
-                                                        JavaScript、JQuery 製作按鈕變換
+                                                        JavaScript、jQuery 製作按鈕變換
                                                     </li>
                                                     <li>
-                                                        插入 Google Fonts 、 Font Awesome 小元件豐富網站
+                                                        Google Fonts 、 Font Awesome 小元件豐富網站
                                                     </li>
                                                 </ul>
 
@@ -247,7 +324,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="page2-img" class="col-lg-6 order-1 my-2">
+                                    <div id="page1-img" class="col-lg-6 order-1 my-2">
                                         <picture>
                                             <source class="lazyload" srcset="images/webp/kyudo_rwd.webp"
                                                 type="image/webp">
@@ -274,7 +351,6 @@
                                 <hr />
                                 <div class="row my-3">
                                     <div class="col-lg-6">
-                                        <h5>民宿管理程式</h5>
                                         <!-- boostrap carousel -->
                                         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                                             <ol class="carousel-indicators">
@@ -466,7 +542,41 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <p>管理方式</p>
+                                        <div class="row my-3">
+                                            <div id="page3-content" class="col-lg-6">
+                                                <div class="card">
+                                                    <h5 class="card-header">民宿管理程式</h5>
+                                                    <div class="card-body">
+                                                        <ul class="card-text">
+                                                            
+                                                            <li>
+                                                                NetBeans 編譯
+                                                            </li>
+                                                            <li>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                
+                                                            </li>
+                                                        </ul>
+        
+                                                        <a 
+                                                            class="btn btn-light"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -507,14 +617,13 @@
         <div class="row">
 
             <div class="col-lg-8">
-                <div class="container border my-3">
+                <div id="myself-contain" class="container border my-3">
                     <div class="row my-2">
+
                         <div id="myself-about" class="col-lg">
                             <h5>【 關於我 】</h5>
-                            <p>出生於1997年，來自新北市永和區，2019年6月畢業於國立東華大學應用數學系，為應屆畢業生。</p>
-
-                            <br />
-                            <p>數學系統計組出身的我，擅長精密的思考與嚴謹的邏輯推導，遇到難題時會想要追根究底直到找出問題的邏輯性。</p>
+                            <p>出生於1997年，來自新北市永和區，2019年6月畢業於國立東華大學應用數學系，為應屆畢業生。數學系統計組出身的我，擅長精密的思考與嚴謹的邏輯推導，遇到難題時會想要追根究底，直到找出問題的邏輯性。
+                            </p>
 
                             <br />
                             <p>在大學修課期間，我接觸很多種程式語言，因而對程式設計產生了濃厚的興趣，於是我決定從較多人使用的Java語言開始深入學習。</p>
@@ -534,7 +643,7 @@
                                 <li>2019.10 , Java OCP JP 程式設計師認證班 - 108小時</li>
                                 <li>2020.04 , SQL Server資料庫概論 - 15小時</li>
                                 <li>2020.04 , Dreamweaver CC創意網頁設計 - 18小時</li>
-                                <li>2020.05 , Photoshop CC影像設計 - 18小時 (學習中)</li>
+                                <li>2020.05 , Photoshop CC影像設計 - 18小時</li>
                             </ul>
                             </P>
                         </div>
@@ -559,6 +668,7 @@
                             <p>我的未來目標是成為一位全端工程師，為了實現這個夢想，短期內，我會在任務完成之餘，運用所學創造超出預期的效果，閒暇時間持續學習框架與新技術，再根據過去學習Java的經驗迅速上手C#，在一年之內晉升為程式設計師。中程目標，嘗試針對問題提供多個不同的解決方案，提出更符合需求的設計，為客戶打造最豐富的內容，然後按照公司願景繼續發展，希望我的加入可以給公司帶來更多價值，成為公司的重要資產。
                             </p>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -622,31 +732,45 @@
             }, 1900);
 
             if ($(window).width() < 992 && $('input').is(':hidden')) {
-                $('#header-name').removeClass('fade-third order-4');
-                $('#header-items').removeClass('fade-third');
-                $('#page2-content').removeClass('order-2');
-                $('#page2-img').removeClass('order-1');
+                $('#header-name').removeClass('order-4');
+                $('#header-items, #header-name').removeClass('fade-third');
+                $('#page1-content, #page3-content').removeClass('order-2');
+                $('#page1-img, #page3-content').removeClass('order-1');
                 $('#header-name').addClass('fade-first');
             } else {
                 $('#myself-about').fadeIn();
+                //
+                $('nav').hide();
+                setTimeout(function () {
+                    var startScrollY = $('#works-head').offset().top;
+                    window.addEventListener('scroll', function () {
+                        var st = this.scrollY;
+                        if (st > startScrollY) {
+                            $('nav').slideDown();
+                        } else {
+                            $('nav').slideUp();
+                        }
+                    });
+                }, 1900);
             }
         });
 
         //錨點捲動
         {
+
             $('#top').click(function () {
                 $('html, body').animate({ scrollTop: 0 }, 500);
             });
 
-            $('#item-works').click(function () {
+            $('#item-works, #nav-works').click(function () {
                 $('html, body').animate({ scrollTop: $('#works-head').offset().top }, 500);
             });
 
-            $('#item-edu').click(function () {
+            $('#item-edu, #nav-edu').click(function () {
                 $('html, body').animate({ scrollTop: $('#education-head').offset().top }, 500);
             });
 
-            $('#item-myself').click(function () {
+            $('#item-myself, #nav-myself').click(function () {
                 $('html, body').animate({ scrollTop: $('#myself-head').offset().top }, 500);
             });
         }
