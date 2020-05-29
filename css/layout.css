@@ -127,6 +127,10 @@ img {
     color: rgb(0, 123, 255);
 }
 
+.card-header{
+    background-color: rgba(0, 0, 50, 0.8);
+}
+
 /* education */
 
 #education .time, .time-now {
@@ -258,6 +262,10 @@ footer {
 
 .pointer {
     cursor: pointer;
+}
+
+.not-allow{
+    cursor: not-allowed!important;
 }
 
 #loading {
