@@ -278,3 +278,18 @@ footer {
     background: white;
     z-index: 1021;
 }
+
+.purple{
+    color: #7C1F65;
+    border-color: #7C1F65;
+}
+
+.purple:hover {
+    color: white;
+    border-color: white;
+    background-color: #7C1F65;
+}
+
+.purple:focus {
+    box-shadow: 0 0 0 0.2rem rgba(124, 31, 101,0.25);
+}
