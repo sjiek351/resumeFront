@@ -19,16 +19,14 @@ img {
     max-width: 90vw;
 }
 
-/* set hint color */
-
-#top i {
-    color: white;
-}
-
 /* navbar */
 
 .navbar{
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+#top i {
+    color: white;
 }
 
 /* header */
