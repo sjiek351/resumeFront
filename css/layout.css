@@ -117,6 +117,10 @@ img {
 
 /* works */
 
+#works hr, #myself hr{
+    background-color: #e0e4e8;
+}
+
 #works, .btn {
     background-color: white;
 }
@@ -125,7 +129,11 @@ img {
     color: rgb(0, 123, 255);
 }
 
-.card-header{
+.card-header-r{
+    background-color: rgba(50, 0, 0, 0.8);
+}
+
+.card-header-b{
     background-color: rgba(0, 0, 50, 0.8);
 }
 
@@ -200,6 +208,10 @@ input:focus {
     outline: none;
 }
 
+#myself hr{
+    display: none;
+}
+
 /* myself-content */
 
 #myself-about, #myself-study, #myself-active, #myself-future {
@@ -239,6 +251,11 @@ footer {
     #myself-about, #myself-study, #myself-active, #myself-future {
         display: inline;
     }
+
+    #myself hr{
+        display: block;
+    }
+    
     input {
         display: none;
     }
@@ -279,6 +296,8 @@ footer {
     z-index: 1021;
 }
 
+/* purple */
+
 .purple{
     color: #7C1F65;
     border-color: #7C1F65;
@@ -292,4 +311,21 @@ footer {
 
 .purple:focus {
     box-shadow: 0 0 0 0.2rem rgba(124, 31, 101,0.25);
+}
+
+/* red */
+
+.red{
+    color:#eb1a25;
+    border-color: #eb1a25;
+}
+
+.red:hover {
+    color: white;
+    border-color: white;
+    background-color: #eb1a25;
+}
+
+.red:focus {
+    box-shadow: 0 0 0 0.2rem rgba(235, 24, 37, 0.25);;
 }
