@@ -323,7 +323,98 @@
 
                             </div>
 
-                            <div class="tab-pane fade" id="backwork" role="tabpanel" aria-labelledby="backwork-tab">
+                            <div class="tab-pane fade" id="backwork" role="tabpanel" aria-labelledby="backwork-tab">      
+                                <!-- 程式3 -->
+                                <div class="row my-3">
+                                    <div id="program3-content" class="col-lg-7 order-2">
+                                        <div class="card">
+                                            <h5 class="card-header card-header-b text-light">Tic Tac Toe 井字棋</h5>
+                                            <div class="card-body">
+                                                <p>
+                                                    古早味小遊戲，具計分板及重置按鈕。</p>
+                                                <ul class="card-text">
+
+                                                    <li>
+                                                        NetBeans 編譯
+                                                    </li>
+                                                    <li>
+                                                        NetBeans IDE 設計 GUI
+                                                    </li>
+                                                    <li>
+                                                        物件導向 (OOP) 基本架構
+                                                    </li>
+
+                                                </ul>
+
+                                                <a href="https://drive.google.com/file/d/11puiU1XzrOeApMgw1GxsffvwbjQ2uD3u/view?usp=sharing"
+                                                    class="btn btn-primary" target="_blank">
+                                                    <i class="fab fa-google-drive"></i>&nbsp;前往下載</a>
+                                                &nbsp;
+                                                <a href="https://github.com/sjiek351/TicTacToe"
+                                                    class="btn purple" target="_blank">
+                                                    <i class="fab fa-github-square"></i>&nbsp;前往Github</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="program1-img" class="col-lg-5 order-1 align-self-center">
+                                        <!-- boostrap carousel -->
+                                        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#carouselExampleCaptions" data-slide-to="0"
+                                                    class="active"></li>
+                                                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                                <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                                                <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+                                            </ol>
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="images/mozjpeg/tictactoe/tictactoe1.jpg" class="d-block w-100"
+                                                        alt="...">
+                                                    <div class="carousel-caption d-none d-md-block">
+                                                        <h5></h5>
+                                                        <p>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/mozjpeg/tictactoe/tictactoe2.jpg" class="d-block w-100"
+                                                        alt="...">
+                                                    <div class="carousel-caption d-none d-md-block">
+
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/mozjpeg/tictactoe/tictactoe3.jpg" class="d-block w-100"
+                                                        alt="...">
+                                                    <div class="carousel-caption d-none d-md-block">
+
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/mozjpeg/tictactoe/tictactoe4.jpg" class="d-block w-100"
+                                                        alt="...">
+                                                    <div class="carousel-caption d-none d-md-block">
+
+                                                    </div>
+                                                </div>
+                                               
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselExampleCaptions"
+                                                role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselExampleCaptions"
+                                                role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <!-- 網頁2 -->
                                 <div class="row my-3">
                                     <div class="col-lg-7">
                                         <div class="card">
@@ -372,6 +463,7 @@
                                     </div>
                                 </div>
                                 <hr />
+                                <!-- 程式1 -->
                                 <div class="row my-3">
                                     <div id="program1-content" class="col-lg-7 align-self-center order-2">
                                         <div class="card">
@@ -394,7 +486,7 @@
 
                                                 </ul>
 
-                                                <a href="https://drive.google.com/drive/folders/1eDWpcEPrxxfojs0kRFS3hPII4j8Dr0zE?usp=sharing"
+                                                <a href="https://drive.google.com/file/d/1eOBggzEt8PQSIxvXawAtnsRXChABupar/view?usp=sharing"
                                                     class="btn btn-primary" target="_blank">
                                                     <i class="fab fa-google-drive"></i>&nbsp;前往下載</a>
                                                 &nbsp;
@@ -761,8 +853,8 @@
             if ($(window).width() < 992 && $('input').is(':hidden')) {
                 $('#header-name').removeClass('order-4');
                 $('#header-items, #header-name').removeClass('fade-third');
-                $('#page1-content, #page3-content , #program1-content').removeClass('order-2');
-                $('#page1-img, #page3-img , #program1-img').removeClass('order-1');
+                $('#page1-content, #page3-content , #program1-content, #program3-content').removeClass('order-2');
+                $('#page1-img, #page3-img , #program1-img, #program3-img').removeClass('order-1');
                 $('#header-name').addClass('fade-first');
             } else {
                 $('#myself-about').fadeIn();
