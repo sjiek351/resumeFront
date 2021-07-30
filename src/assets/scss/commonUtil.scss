@@ -1,0 +1,26 @@
+$backgroundColor: black;
+
+$primaryColor: rgb(165, 115, 255);
+$secondaryColor: rgb(201, 56, 56);
+
+$lightColor: rgb(252, 252, 252);
+$darkColor: rgb(94, 87, 105);
+
+
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.primaryColor{
+    color: $primaryColor;
+}
+
+.primaryColorBack{
+    background-color: $primaryColor;
+}

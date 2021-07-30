@@ -1,0 +1,47 @@
+{
+    "companys": [
+        {
+            "companyId": "20200706",
+            "startTime": "2020.07",
+            "endTime": "2021.07",
+            "companyName": "緯德科技股份有限公司",
+            "work": "軟體工程師",
+            "content": "派駐至客戶端撰寫程式"
+        }
+    ],
+    "projects": [
+        {
+            "companyId": "20200706",
+            "startTime": "2021.01",
+            "endTime": "2021.07",
+            "projectName": "勞保局內部系統-勞工退休金提繳系統",
+            "work": "全端工程師",
+            "content": "對勞退提繳系統做重構及整合，我負責重構的功能包含排程、產出PDF、產出EXCEL、FTP碰檔、寄送郵件及基本的CRUD。",
+            "technologys": [
+                "SpringMVC",
+                "Thymeleaf",
+                "Bootstrap",
+                "Quartz",
+                "Jquery",
+                "iText",
+                "Apache POI",
+                "Apache FTPClient"
+            ]
+        },
+        {
+            "companyId": "20200706",
+            "startTime": "2020.10",
+            "endTime": "2021.01",
+            "projectName": "國泰人壽內部系統-數據字典",
+            "work": "全端工程師",
+            "content": "對國壽內部保險資訊的查詢系統做重構，大部分為CRUD，對DB資料做操作及呈現。",
+            "technologys": [
+                "Vue",
+                "e-BAF(國壽MVC框架)",
+                "Bootstrap",
+                "JQuery",
+                "Axios"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "skills": [
+        {
+            "type": "1",
+            "name": "HTML",
+            "level": "3"
+        },
+        {
+            "type": "1",
+            "name": "Javascript",
+            "level": "3"
+        },
+        {
+            "type": "1",
+            "name": "Java",
+            "level": "3"
+        },
+        {
+            "type": "1",
+            "name": "PL/SQL",
+            "level": "3"
+        },
+        {
+            "type": "1",
+            "name": "CSS",
+            "level": "2"
+        },
+        {
+            "type": "1",
+            "name": "Typescript",
+            "level": "1"
+        },
+        {
+            "type": "1",
+            "name": "Scss",
+            "level": "1"
+        },
+        {
+            "type": "2",
+            "name": "SpringMVC",
+            "level": "3"
+        },
+        {
+            "type": "2",
+            "name": "Thymeleaf",
+            "level": "2"
+        },
+        {
+            "type": "2",
+            "name": "Bootstrap",
+            "level": "2"
+        },
+        {
+            "type": "2",
+            "name": "Vue",
+            "level": "2"
+        },
+        {
+            "type": "2",
+            "name": "Quartz",
+            "level": "2"
+        },
+        {
+            "type": "2",
+            "name": "SpringBoot",
+            "level": "1"
+        },
+        {
+            "type": "2",
+            "name": "Angular",
+            "level": "1"
+        },
+        {
+            "type": "2",
+            "name": "Hibernate",
+            "level": "1"
+        },
+        {
+            "type": "3",
+            "name": "Jquery",
+            "level": "2"
+        },
+        {
+            "type": "3",
+            "name": "iText",
+            "level": "2"
+        },
+        {
+            "type": "3",
+            "name": "Apache POI",
+            "level": "2"
+        },
+        {
+            "type": "3",
+            "name": "Apache FTPClient",
+            "level": "2"
+        },
+        {
+            "type": "3",
+            "name": "Axios",
+            "level": "2"
+        },
+        {
+            "type": "4",
+            "name": "Eclipse",
+            "level": "3"
+        },
+        {
+            "type": "4",
+            "name": "Visual Studio Code",
+            "level": "3"
+        },
+        {
+            "type": "4",
+            "name": "Sourcetree",
+            "level": "3"
+        },
+        {
+            "type": "4",
+            "name": "SqlDeveloper",
+            "level": "2"
+        },
+        {
+            "type": "4",
+            "name": "FileZilla",
+            "level": "2"
+        },
+        {
+            "type": "4",
+            "name": "Dreamweaver",
+            "level": "1"
+        },
+        {
+            "type": "4",
+            "name": "NetBeans",
+            "level": "1"
+        },
+        {
+            "type": "4",
+            "name": "Github",
+            "level": "1"
+        }
+    ]
+}
