@@ -16,8 +16,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Rsaa100',
-      component: Rsaa100
+      name: 'Rsca100',
+      component: Rsca100
     },
     {
       path: '/Rsba100',
@@ -25,9 +25,9 @@ export default new Router({
       component: Rsba100
     },
     {
-      path: '/Rsca100',
-      name: 'Rsca100',
-      component: Rsca100
+      path: '/Rsaa100',
+      name: 'Rsaa100',
+      component: Rsaa100
     },
     {
       path: '/Rsda100',

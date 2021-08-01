@@ -1,9 +1,7 @@
 <!-- 載入畫面-->
 <template>
 <div class="hello">
-
-    <canvas id="canvas" width="300" height="300"></canvas>
-    <!-- <input type="button" @click="clickme()" /> -->
+   
 
 </div>
 </template>
@@ -50,7 +48,7 @@ export default {
 </script>
 
 <style scoped>
-#canvas {
+/* #canvas {
     border: 5px solid black;
-}
+} */
 </style>

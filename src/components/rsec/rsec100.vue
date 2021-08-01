@@ -1,23 +1,24 @@
 <!-- Article 3.經歷-->
 <template>
 <v-container id="rsec100">
-    <h2 class="title spacing-playground py-0 px-2">經歷</h2>
+    <h2 class="title">經歷</h2>
 
     <v-timeline dense align-top>
-        <v-timeline-item v-for="(company,index) in companys" v-bind:key="index" color="success">
+        <v-timeline-item v-for="(experience,index) in experiences" v-bind:key="index" color="primary">
             <v-row>
                 <v-col cols="12" lg="2">
-                    <span>{{ company.startTime }}-{{ company.endTime }}</span>
+                    <h3 v-if="experience.startTime && experience.endTime">{{ experience.startTime }}~{{ experience.endTime }}</h3>
+                    <h3 v-else-if="experience.endTime">{{ experience.endTime }}</h3>
                 </v-col>
                 <v-col cols="12" lg="10">
-                    <h5>{{company.companyName}} {{company.work}}</h5>
-                    工作內容:{{company.content}}
+                    <h3>{{experience.expName}}&nbsp;
+                        <template v-if="experience.job">{{experience.job}}</template>
+                    </h3>
+                    <p v-if="experience.content">工作內容:{{experience.content}}</p>
 
-                    <v-timeline dense align-top>
-                        <v-timeline-item v-for="(project,index) in projects" v-bind:key="index" small>
-                            <Rsec110 v-if='company.companyId == project.companyId' :project="project" />
-                        </v-timeline-item>
-                    </v-timeline>
+                    <div v-for="(project,index) in projects" v-bind:key="index">
+                        <Rsec110 v-if='experience.expId == project.expId' :project="project" />
+                    </div>
                 </v-col>
             </v-row>
         </v-timeline-item>
@@ -35,7 +36,7 @@ export default {
     },
     data() {
         return {
-            companys: {},
+            experiences: {},
             projects: {}
         }
     },
@@ -46,7 +47,7 @@ export default {
         findExp() {
             this.$api.post('rsec100/findExp')
                 .then(response => {
-                    this.companys = response.data.companys;
+                    this.experiences = response.data.experiences;
                     this.projects = response.data.projects;
                 })
                 .catch(error => {
@@ -60,21 +61,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../assets/scss/commonUtil.scss";
-
-#rsec100 {
-    .v-timeline--dense:not(.v-timeline--reverse) {
-        //修正時間條跑版
-        $timeline-divider-width: 96px !default;
-        $timeline-line-width: 2px !default;
-
-        &:before {
-            left: calc(#{$timeline-divider-width / 2} - #{$timeline-line-width / 2});
-            right: initial;
-        }
-    }
-
-    .v-timeline-item__inner-dot {
-        background-color: $primaryColor;
-    }
-}
 </style>

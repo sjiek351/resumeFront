@@ -4,32 +4,60 @@
     <h2 class="title">技能</h2>
     <v-row>
         <v-col cols="12" lg="3">
-            <ul>語言
-                <li v-for="(language, index) in languages" v-bind:key="index">{{language.name}}:{{language.level}}</li>
-            </ul>
+
+            <h3>語言</h3>
+            <div v-for="(language, index) in languages" v-bind:key="index" class="d-flex align-center my-1">
+                {{language.name}}
+                <Level v-if="language.level == 1" :level="language.level" :color="'yellow'" :describe="'有學習'"></Level>
+                <Level v-if="language.level == 2" :level="language.level" :color="'orange'" :describe="'有實務經驗'"></Level>
+                <Level v-if="language.level == 3" :level="language.level" :color="'red'" :describe="'熟練'"></Level>
+            </div>
+
         </v-col>
         <v-col cols="12" lg="3">
-            <ul>框架
-                <li v-for="(framework, index) in frameworks" v-bind:key="index">{{framework.name}}:{{framework.level}}</li>
-            </ul>
+
+            <h3>框架</h3>
+            <div v-for="(framework, index) in frameworks" v-bind:key="index" class="d-flex align-center my-1">
+                {{framework.name}}
+                <Level v-if="framework.level == 1" :level="framework.level" :color="'yellow'" :describe="'有學習'"></Level>
+                <Level v-if="framework.level == 2" :level="framework.level" :color="'orange'" :describe="'有實務經驗'"></Level>
+                <Level v-if="framework.level == 3" :level="framework.level" :color="'red'" :describe="'熟練'"></Level>
+            </div>
+
         </v-col>
         <v-col cols="12" lg="3">
-            <ul>函式庫
-                <li v-for="(library, index) in librarys" v-bind:key="index">{{library.name}}:{{library.level}}</li>
-            </ul>
+
+            <h3>函式庫</h3>
+            <div v-for="(library, index) in librarys" v-bind:key="index" class="d-flex align-center my-1">
+                {{library.name}}
+                <Level v-if="library.level == 1" :level="library.level" :color="'yellow'" :describe="'有學習'"></Level>
+                <Level v-if="library.level == 2" :level="library.level" :color="'orange'" :describe="'有實務經驗'"></Level>
+                <Level v-if="library.level == 3" :level="library.level" :color="'red'" :describe="'熟練'"></Level>
+            </div>
+
         </v-col>
         <v-col cols="12" lg="3">
-            <ul>開發工具
-                <li v-for="(tool, index) in tools" v-bind:key="index">{{tool.name}}:{{tool.level}}</li>
-            </ul>
+
+            <h3>開發工具</h3>
+            <div v-for="(tool, index) in tools" v-bind:key="index" class="d-flex align-center my-1">
+                {{tool.name}}
+                <Level v-if="tool.level == 1" :level="tool.level" :color="'yellow'" :describe="'有學習'"></Level>
+                <Level v-if="tool.level == 2" :level="tool.level" :color="'orange'" :describe="'有實務經驗'"></Level>
+                <Level v-if="tool.level == 3" :level="tool.level" :color="'red'" :describe="'熟練'"></Level>
+            </div>
+
         </v-col>
     </v-row>
 </v-container>
 </template>
 
 <script>
+import Level from "../commonUtil/level.vue";
 export default {
     name: 'Rseb100',
+    components: {
+        Level
+    },
     data() {
         return {
             languages: {},

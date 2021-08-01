@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
-// import zhHant from 'vuetify/lib/locale/zh-Hant';
-
 import colors from 'vuetify/lib/util/colors'
 
 Vue.use(Vuetify);
@@ -10,23 +8,21 @@ Vue.use(Vuetify);
 export default new Vuetify({
   theme: {
     dark: false,
-    default: 'light',
     themes: {
       light: {
-        primary: colors.red.darken1,//'#007BFF'
-        secondary: '#424242',
-        accent: '#82B1FF',
-        error: '#FF5252',
-        info: '#2196F3',
-        success: '#4CAF50',
-        warning: '#FFC107'
+        primary: colors.indigo.lighten3,
+        secondary: colors.red.lighten3,
+        light: colors.blueGrey.lighten5,
+        dark: colors.grey.darken4,
+      },
+      dark: {
+        primary: colors.indigo.darken2,
+        secondary: colors.red.darken2,
+        light: colors.blueGrey.darken4,
+        dark: colors.grey.lighten3,
       },
     },
   },
-   /* lang: {
-      locales: { zhHant },
-      current: 'zhHant',
-    },*/
   icons: {
     iconfont: 'fa',
   },

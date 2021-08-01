@@ -13,7 +13,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.3",
     "axios": "^0.21.1",
-    "bootstrap": "^5.0.2",
     "pdfjs-dist": "^2.7.570",
     "roboto-fontface": "*",
     "vue": "^2.6.14",

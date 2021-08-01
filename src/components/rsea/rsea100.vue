@@ -2,9 +2,9 @@
 <template>
 <v-container>
     <v-row v-if="personal">
-        <v-col cols="12" lg="5" class="order-lg-2 flexCenter">
+        <v-col cols="12" lg="5" class="order-lg-2 d-flex justify-center align-center">
             <div class="text-center">
-                <img id="photo" src="../../assets/img/webp/me.webp" />
+                <img id="photo" class="rounded-circle" src="../../assets/img/webp/me.webp" />
                 <h1><b>{{ personal.name }}&nbsp;{{ personal.nameEng }}</b></h1>
                 <p>
                     {{ personal.job }}<br />
@@ -15,9 +15,8 @@
             </div>
         </v-col>
 
-        <v-col cols="12" lg="7" class="order-lg-1 flexCenter">
-            <p>
-                {{ personal.introduction }}
+        <v-col cols="12" lg="7" class="order-lg-1 d-flex justify-center align-center">
+            <p v-html="personal.introduction">
             </p>
         </v-col>
     </v-row>
@@ -25,12 +24,8 @@
 </template>
 
 <script>
-import Rsea110 from "./rsea110.vue";
 export default {
     name: "Rsea100",
-    components: {
-        Rsea110,
-    },
     data() {
         return {
             personal: {}

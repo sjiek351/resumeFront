@@ -4,18 +4,30 @@
     <v-row align="center" justify="center">
         <v-col cols="12">
             <v-footer padless>
-                <v-card id="vFooterCard" class="lighten-1 text-center" flat tile>
-                    <v-card-text>
-                        <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon>
-                            <v-icon size="24px">
-                                {{ icon }}
-                            </v-icon>
-                        </v-btn>
+                <v-card width="100%" color="primary" flat tile>
+                    <v-card-text class="text-lg-center">
+                        <v-container>
+                            <v-row>
+                                <v-col cols="12" lg="6">
+                                    <v-icon class="mx-1">
+                                        fas fa-envelope
+                                    </v-icon>
+                                    <span>E-mail : {{ personal.email }}</span>
+                                </v-col>
+                                <v-col cols="12" lg="6">
+
+                                    <v-icon class="mx-1">
+                                        fas fa-phone
+                                    </v-icon>
+                                    <span>Phone : {{ personal.cellphone }}</span>
+                                </v-col>
+                            </v-row>
+                        </v-container>
                     </v-card-text>
 
                     <v-divider></v-divider>
 
-                    <v-card-text id="vFooterText">
+                    <v-card-text class="text-center">
                         Copyright &copy; {{ new Date().getFullYear() }} — <strong>崔永昀</strong> All Rights Reserved.
                     </v-card-text>
                 </v-card>
@@ -30,11 +42,21 @@ export default {
     name: 'Rsza100',
     data() {
         return {
-            icons: [
-                'fas fa-envelope',
-                'fas fa-phone',
-                'fab fa-facebook',
-            ]
+            personal: {}
+        }
+    },
+    created: function () {
+        this.findPersonal();
+    },
+    methods: {
+        findPersonal() {
+            this.$api.post('rsza100/findPersonal')
+                .then(response => {
+                    this.personal = response.data.personal;
+                })
+                .catch(error => {
+                    console.log(error);
+                });
         }
     },
 }
@@ -42,18 +64,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/scss/commonUtil.scss";
-
-#rsza100 {
-    background-color: $primaryColor;
-
-    #vFooterCard {
-        width: 100%;
-        background-color: $primaryColor;
-
-        #vFooterText {
-            color: $lightColor;
-        }
-    }
-
-}
 </style>
