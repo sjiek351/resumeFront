@@ -17,16 +17,20 @@
                         <div>
                             <v-chip v-for="(technology, index) in project.technologys" :key="index" class="ma-1" color="primary">{{technology}}</v-chip>
                         </div>
-                        <p class="text--primary my-2">
-                            工作內容 : {{project.content}}
-                        </p>
+                        <div class="my-2">
+                            <h4>專案工作內容:</h4>
+                            <p v-html="project.content"></p>
+                        </div>
                     </v-card-text>
                 </v-list-item-content>
 
             </v-list-item>
 
             <v-card-actions>
-                <v-btn outlined rounded text>
+                <v-btn v-if="project.display" :href="project.display" target="_blank" outlined rounded text >
+                    Demo
+                </v-btn>
+                <v-btn v-else color="primary" outlined rounded text>
                     不適合展示
                 </v-btn>
             </v-card-actions>

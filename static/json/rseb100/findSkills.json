@@ -18,7 +18,7 @@
         {
             "type": "1",
             "name": "PL/SQL",
-            "level": 3
+            "level": 2
         },
         {
             "type": "1",
@@ -58,6 +58,11 @@
         {
             "type": "2",
             "name": "Quartz",
+            "level": 2
+        },
+        {
+            "type": "2",
+            "name": "JUnit",
             "level": 2
         },
         {

@@ -1,16 +1,23 @@
 <!-- Article 2.技能-->
 <template>
 <v-container>
-    <h2 class="title">技能</h2>
+    <h2>技能</h2>
+    <v-row>
+        <v-col cols="12" class="d-flex align-center ">
+            <Level :level="1" :color="'yellow'" /><span class="mr-3">有學習</span>
+            <Level :level="1" :color="'orange'" /><span class="mr-3">有實務經驗</span>
+            <Level :level="1" :color="'red'" /><span class="mr-3">熟練</span>
+        </v-col>
+    </v-row>
     <v-row>
         <v-col cols="12" lg="3">
 
             <h3>語言</h3>
             <div v-for="(language, index) in languages" v-bind:key="index" class="d-flex align-center my-1">
                 {{language.name}}
-                <Level v-if="language.level == 1" :level="language.level" :color="'yellow'" :describe="'有學習'"></Level>
-                <Level v-if="language.level == 2" :level="language.level" :color="'orange'" :describe="'有實務經驗'"></Level>
-                <Level v-if="language.level == 3" :level="language.level" :color="'red'" :describe="'熟練'"></Level>
+                <Level v-if="language.level == 1" :level="language.level" :color="'yellow'" :describe="'有學習'" />
+                <Level v-if="language.level == 2" :level="language.level" :color="'orange'" :describe="'有實務經驗'" />
+                <Level v-if="language.level == 3" :level="language.level" :color="'red'" :describe="'熟練'" />
             </div>
 
         </v-col>

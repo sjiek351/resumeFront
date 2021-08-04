@@ -1,7 +1,7 @@
 <!-- Article 4.證照-->
 <template>
 <v-container id="rsed100">
-    <h2 class="title">證照</h2>
+    <h2>證照</h2>
     <v-row>
         <v-col cols="12" lg="6" v-for="(item, index) in pdfList" :key="index" class="text-center">
             <h3>{{item.name}}</h3>

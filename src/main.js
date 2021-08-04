@@ -10,7 +10,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 
 import common from '@/assets/js/commonUtil'
 import api from '@/assets/js/apiUtil'
-// import '@/assets/scss/main.scss'
+import '@/assets/scss/main.scss'
 
 Vue.prototype.$common = common;
 Vue.prototype.$api = api;

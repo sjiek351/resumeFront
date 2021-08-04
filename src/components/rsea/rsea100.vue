@@ -4,7 +4,7 @@
     <v-row v-if="personal">
         <v-col cols="12" lg="5" class="order-lg-2 d-flex justify-center align-center">
             <div class="text-center">
-                <img id="photo" class="rounded-circle" src="../../assets/img/webp/me.webp" />
+                <img id="photo" class="rounded-circle" :src="photoSrc" />
                 <h1><b>{{ personal.name }}&nbsp;{{ personal.nameEng }}</b></h1>
                 <p>
                     {{ personal.job }}<br />
@@ -28,7 +28,8 @@ export default {
     name: "Rsea100",
     data() {
         return {
-            personal: {}
+            personal: {},
+            photoSrc: '/static/img/webp/me.webp'
         };
     },
     created: function () {

@@ -1,15 +1,11 @@
 <!-- 元件架構-->
 <template>
-<v-app id="app">
+<v-app>
     <!-- v-app-bar -->
     <Rsaa100 />
 
     <v-main>
-        <v-container fluid>
-
-            <router-view></router-view>
-
-        </v-container>
+        <router-view></router-view>
     </v-main>
 
     <!-- v-footer -->
@@ -37,6 +33,4 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-}
 </style>

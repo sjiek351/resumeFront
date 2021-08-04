@@ -8,18 +8,29 @@
                     <v-card-text class="text-lg-center">
                         <v-container>
                             <v-row>
-                                <v-col cols="12" lg="6">
-                                    <v-icon class="mx-1">
+                                <v-col cols="12" lg="4">
+                                    <v-icon class="mx-2" size="24px">
                                         fas fa-envelope
                                     </v-icon>
                                     <span>E-mail : {{ personal.email }}</span>
                                 </v-col>
-                                <v-col cols="12" lg="6">
-
-                                    <v-icon class="mx-1">
+                                <v-col cols="12" lg="4">
+                                    <v-icon class="mx-2" size="24px">
                                         fas fa-phone
                                     </v-icon>
                                     <span>Phone : {{ personal.cellphone }}</span>
+                                </v-col>
+                                <v-col cols="12" lg="4">
+                                    <v-btn class="mx-2" icon>
+                                        <v-icon size="24px">
+                                            fab fa-line
+                                        </v-icon>
+                                    </v-btn>
+                                    <v-btn class="mx-2" icon>
+                                        <v-icon size="24px">
+                                            fab fa-facebook
+                                        </v-icon>
+                                    </v-btn>
                                 </v-col>
                             </v-row>
                         </v-container>

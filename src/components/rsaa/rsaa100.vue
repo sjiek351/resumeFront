@@ -1,11 +1,16 @@
 <!-- 導覽列-->
 <template>
 <v-app-bar id="rsaa100" color="primary" elevate-on-scroll>
-    <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-    <v-toolbar-title>Yung</v-toolbar-title>
+    <v-toolbar-title>
+        <v-avatar size="56"><v-img :src="logoSrc" /></v-avatar><span class="mx-1">YUNG</span>
+    </v-toolbar-title>
 
     <v-spacer></v-spacer>
+
+    <v-btn class="mx-2" href="https://github.com/sjiek351" target="_blank" icon>
+        <v-icon>fab fa-github</v-icon>
+    </v-btn>
 
     <v-btn class="mx-2" @click="changeTheme()" icon>
         <v-icon>fas fa-adjust</v-icon>
@@ -17,15 +22,14 @@
 <script>
 export default {
     name: 'Rsaa100',
-
     data() {
-        return {}
+        return {
+            logoSrc: '/static/img/webp/logo.webp'
+        }
     },
     methods: {
-        scroll2Position(y) {
-            window.scrollTo(0, y);
-        },
         changeTheme() {
+            console.log(this.$vuetify.theme);
             this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
         }
     },
