@@ -3,13 +3,19 @@
 <v-app-bar id="rsaa100" color="primary" elevate-on-scroll>
 
     <v-toolbar-title>
-        <v-avatar size="56"><v-img :src="logoSrc" /></v-avatar><span class="mx-1">YUNG</span>
+        <v-avatar size="56">
+            <v-img :src="logoSrc" />
+        </v-avatar><span class="mx-1">YUNG</span>
     </v-toolbar-title>
 
     <v-spacer></v-spacer>
 
     <v-btn class="mx-2" href="https://github.com/sjiek351" target="_blank" icon>
         <v-icon>fab fa-github</v-icon>
+    </v-btn>
+
+    <v-btn class="mx-2" @click="print()" icon>
+        <v-icon>fas fa-print</v-icon>
     </v-btn>
 
     <v-btn class="mx-2" @click="changeTheme()" icon>
@@ -28,6 +34,9 @@ export default {
         }
     },
     methods: {
+        print() {
+            window.print();
+        },
         changeTheme() {
             console.log(this.$vuetify.theme);
             this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
@@ -43,5 +52,13 @@ export default {
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+@media print {
+    #rsaa100 {
+        position: relative;
+        top: auto;
+        z-index: auto;
+    }
 }
 </style>

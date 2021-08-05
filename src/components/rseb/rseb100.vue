@@ -1,7 +1,7 @@
 <!-- Article 2.技能-->
 <template>
 <v-container>
-    <h2>技能</h2>
+    <h2 class="my-3">技能 Skill</h2>
     <v-row>
         <v-col cols="12" class="d-flex align-center ">
             <Level :level="1" :color="'yellow'" /><span class="mr-3">有學習</span>
@@ -14,7 +14,7 @@
 
             <h3>語言</h3>
             <div v-for="(language, index) in languages" v-bind:key="index" class="d-flex align-center my-1">
-                {{language.name}}
+                <span>{{language.name}}</span>
                 <Level v-if="language.level == 1" :level="language.level" :color="'yellow'" :describe="'有學習'" />
                 <Level v-if="language.level == 2" :level="language.level" :color="'orange'" :describe="'有實務經驗'" />
                 <Level v-if="language.level == 3" :level="language.level" :color="'red'" :describe="'熟練'" />
@@ -25,7 +25,7 @@
 
             <h3>框架</h3>
             <div v-for="(framework, index) in frameworks" v-bind:key="index" class="d-flex align-center my-1">
-                {{framework.name}}
+                <span>{{framework.name}}</span>
                 <Level v-if="framework.level == 1" :level="framework.level" :color="'yellow'" :describe="'有學習'"></Level>
                 <Level v-if="framework.level == 2" :level="framework.level" :color="'orange'" :describe="'有實務經驗'"></Level>
                 <Level v-if="framework.level == 3" :level="framework.level" :color="'red'" :describe="'熟練'"></Level>
@@ -36,7 +36,7 @@
 
             <h3>函式庫</h3>
             <div v-for="(library, index) in librarys" v-bind:key="index" class="d-flex align-center my-1">
-                {{library.name}}
+                <span>{{library.name}}</span>
                 <Level v-if="library.level == 1" :level="library.level" :color="'yellow'" :describe="'有學習'"></Level>
                 <Level v-if="library.level == 2" :level="library.level" :color="'orange'" :describe="'有實務經驗'"></Level>
                 <Level v-if="library.level == 3" :level="library.level" :color="'red'" :describe="'熟練'"></Level>
@@ -47,7 +47,7 @@
 
             <h3>開發工具</h3>
             <div v-for="(tool, index) in tools" v-bind:key="index" class="d-flex align-center my-1">
-                {{tool.name}}
+                <span>{{tool.name}}</span>
                 <Level v-if="tool.level == 1" :level="tool.level" :color="'yellow'" :describe="'有學習'"></Level>
                 <Level v-if="tool.level == 2" :level="tool.level" :color="'orange'" :describe="'有實務經驗'"></Level>
                 <Level v-if="tool.level == 3" :level="tool.level" :color="'red'" :describe="'熟練'"></Level>

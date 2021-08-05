@@ -6,33 +6,46 @@
 
             <v-list-item three-line>
                 <v-list-item-content>
+
                     <div class="text-overline mb-4">
                         Project
                     </div>
+
                     <v-list-item-title class="text-h5 mb-1">
                         {{project.projectName}} {{project.job}}
                     </v-list-item-title>
+
                     <v-list-item-subtitle>{{ project.startTime }}~{{ project.endTime }}</v-list-item-subtitle>
+
                     <v-card-text>
-                        <div>
-                            <v-chip v-for="(technology, index) in project.technologys" :key="index" class="ma-1" color="primary">{{technology}}</v-chip>
-                        </div>
+
+                        <v-chip-group show-arrows multiple>
+                            <v-chip v-for="(technology, index) in project.technologys" :key="index" class="ma-1" color="primary" filter>{{technology}}</v-chip>
+                        </v-chip-group>
+
                         <div class="my-2">
                             <h4>專案工作內容:</h4>
                             <p v-html="project.content"></p>
                         </div>
+
                     </v-card-text>
+
                 </v-list-item-content>
 
             </v-list-item>
 
             <v-card-actions>
-                <v-btn v-if="project.display" :href="project.display" target="_blank" outlined rounded text >
+
+                <v-spacer></v-spacer>
+
+                <v-btn v-if="project.display" :href="project.display" target="_blank" outlined rounded text>
                     Demo
                 </v-btn>
-                <v-btn v-else color="primary" outlined rounded text>
+
+                <v-btn v-else rounded disabled>
                     不適合展示
                 </v-btn>
+
             </v-card-actions>
 
         </v-card>

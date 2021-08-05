@@ -9,15 +9,19 @@
                         <v-container>
                             <v-row>
                                 <v-col cols="12" lg="4">
-                                    <v-icon class="mx-2" size="24px">
-                                        fas fa-envelope
-                                    </v-icon>
+                                    <v-btn class="mx-2" :href="'mailto:' + personal.email" icon>
+                                        <v-icon size="24px">
+                                            fas fa-envelope
+                                        </v-icon>
+                                    </v-btn>
                                     <span>E-mail : {{ personal.email }}</span>
                                 </v-col>
                                 <v-col cols="12" lg="4">
-                                    <v-icon class="mx-2" size="24px">
-                                        fas fa-phone
-                                    </v-icon>
+                                    <v-btn class="mx-2" :href="'tel:' + personal.cellphone" icon>
+                                        <v-icon size="24px">
+                                            fas fa-phone
+                                        </v-icon>
+                                    </v-btn>
                                     <span>Phone : {{ personal.cellphone }}</span>
                                 </v-col>
                                 <v-col cols="12" lg="4">

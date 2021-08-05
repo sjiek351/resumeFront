@@ -1,3 +1,21 @@
 p {
     font-size: 1.2rem;
 }
+
+/* 列印畫面 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    page-break-inside: avoid;
+}
+
+.printBlock {
+    page-break-before: always;
+}
+
+/**/
