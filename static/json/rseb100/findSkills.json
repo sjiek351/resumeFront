@@ -1,149 +1,149 @@
 {
     "skills": [
         {
-            "type": "1",
-            "name": "HTML",
-            "level": 3
+            "skillName": "HTML",
+            "type": 1,
+            "rank": 3
         },
         {
-            "type": "1",
-            "name": "Javascript",
-            "level": 3
+            "skillName": "Javascript",
+            "type": 1,
+            "rank": 3
         },
         {
-            "type": "1",
-            "name": "Java",
-            "level": 3
+            "skillName": "Java",
+            "type": 1,
+            "rank": 3
         },
         {
-            "type": "1",
-            "name": "PL/SQL",
-            "level": 2
+            "skillName": "PL/SQL",
+            "type": 1,
+            "rank": 2
         },
         {
-            "type": "1",
-            "name": "CSS",
-            "level": 2
+            "skillName": "CSS",
+            "type": 1,
+            "rank": 2
         },
         {
-            "type": "1",
-            "name": "Typescript",
-            "level": 1
+            "skillName": "Typescript",
+            "type": 1,
+            "rank": 1
         },
         {
-            "type": "1",
-            "name": "Scss",
-            "level": 1
+            "skillName": "Scss",
+            "type": 1,
+            "rank": 1
         },
         {
-            "type": "2",
-            "name": "SpringMVC",
-            "level": 3
+            "skillName": "SpringMVC",
+            "type": 2,
+            "rank": 3
         },
         {
-            "type": "2",
-            "name": "Thymeleaf",
-            "level": 2
+            "skillName": "Thymeleaf",
+            "type": 2,
+            "rank": 2
         },
         {
-            "type": "2",
-            "name": "Bootstrap",
-            "level": 2
+            "skillName": "Bootstrap",
+            "type": 2,
+            "rank": 2
         },
         {
-            "type": "2",
-            "name": "Vue",
-            "level": 2
+            "skillName": "Vue",
+            "type": 2,
+            "rank": 2
         },
         {
-            "type": "2",
-            "name": "Quartz",
-            "level": 2
+            "skillName": "Quartz",
+            "type": 2,
+            "rank": 2
         },
         {
-            "type": "2",
-            "name": "JUnit",
-            "level": 2
+            "skillName": "JUnit",
+            "type": 2,
+            "rank": 2
         },
         {
-            "type": "2",
-            "name": "SpringBoot",
-            "level": 1
+            "skillName": "SpringBoot",
+            "type": 2,
+            "rank": 1
         },
         {
-            "type": "2",
-            "name": "Angular",
-            "level": 1
+            "skillName": "Angular",
+            "type": 2,
+            "rank": 1
         },
         {
-            "type": "2",
-            "name": "Hibernate",
-            "level": 1
+            "skillName": "Hibernate",
+            "type": 2,
+            "rank": 1
         },
         {
-            "type": "3",
-            "name": "Jquery",
-            "level": 2
+            "skillName": "Jquery",
+            "type": 3,
+            "rank": 2
         },
         {
-            "type": "3",
-            "name": "iText",
-            "level": 2
+            "skillName": "iText",
+            "type": 3,
+            "rank": 2
         },
         {
-            "type": "3",
-            "name": "Apache POI",
-            "level": 2
+            "skillName": "Apache POI",
+            "type": 3,
+            "rank": 2
         },
         {
-            "type": "3",
-            "name": "Apache FTPClient",
-            "level": 2
+            "skillName": "Apache FTPClient",
+            "type": 3,
+            "rank": 2
         },
         {
-            "type": "3",
-            "name": "Axios",
-            "level": 2
+            "skillName": "Axios",
+            "type": 3,
+            "rank": 2
         },
         {
-            "type": "4",
-            "name": "Eclipse",
-            "level": 3
+            "skillName": "Eclipse",
+            "type": 4,
+            "rank": 3
         },
         {
-            "type": "4",
-            "name": "Visual Studio Code",
-            "level": 3
+            "skillName": "Visual Studio Code",
+            "type": 4,
+            "rank": 3
         },
         {
-            "type": "4",
-            "name": "Sourcetree",
-            "level": 3
+            "skillName": "Sourcetree",
+            "type": 4,
+            "rank": 3
         },
         {
-            "type": "4",
-            "name": "SqlDeveloper",
-            "level": 2
+            "skillName": "SQL Developer",
+            "type": 4,
+            "rank": 2
         },
         {
-            "type": "4",
-            "name": "FileZilla",
-            "level": 2
+            "skillName": "FileZilla",
+            "type": 4,
+            "rank": 2
         },
         {
-            "type": "4",
-            "name": "Dreamweaver",
-            "level": 1
+            "skillName": "Dreamweaver",
+            "type": 4,
+            "rank": 1
         },
         {
-            "type": "4",
-            "name": "NetBeans",
-            "level": 1
+            "skillName": "NetBeans",
+            "type": 4,
+            "rank": 1
         },
         {
-            "type": "4",
-            "name": "Github",
-            "level": 1
+            "skillName": "GitHub Desktop",
+            "type": 4,
+            "rank": 1
         }
     ]
 }

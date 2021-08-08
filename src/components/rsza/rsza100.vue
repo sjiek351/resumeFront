@@ -4,7 +4,7 @@
     <v-row align="center" justify="center">
         <v-col cols="12">
             <v-footer padless>
-                <v-card width="100%" color="primary" flat tile>
+                <v-card width="100%" color="primary" flat>
                     <v-card-text class="text-lg-center">
                         <v-container>
                             <v-row>
@@ -43,7 +43,7 @@
                     <v-divider></v-divider>
 
                     <v-card-text class="text-center">
-                        Copyright &copy; {{ new Date().getFullYear() }} — <strong>崔永昀</strong> All Rights Reserved.
+                        &copy; {{ new Date().getFullYear() }} — <strong>{{personal.name}}</strong> All Rights Reserved.
                     </v-card-text>
                 </v-card>
             </v-footer>

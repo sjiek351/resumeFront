@@ -15,7 +15,7 @@ import '@/assets/scss/main.scss'
 Vue.prototype.$common = common;
 Vue.prototype.$api = api;
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({

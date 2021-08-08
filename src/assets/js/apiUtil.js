@@ -8,7 +8,7 @@ const api = {
         return axios({
             method: "get",
             url: common.isLocal() ? `/static/json/${url}.json` : url,
-            data: data
+            data: data ? data : {}
         });
     },
 
@@ -22,7 +22,7 @@ const api = {
         return axios({
             method: "post",
             url: url,
-            data: data,
+            data: data ? data : {}
         });
     }
 

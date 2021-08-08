@@ -29,7 +29,7 @@ export default {
     data() {
         return {
             personal: {},
-            photoSrc: '/static/img/webp/me.webp'
+            photoSrc: './static/img/webp/me.webp'
         };
     },
     created: function () {

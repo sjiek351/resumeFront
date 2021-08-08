@@ -7,20 +7,6 @@ $lightColor: #ECEFF1;
 $darkColor: #212121;
 
 
-.flexCenter{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .pointer {
     cursor: pointer;
-}
-
-.primaryColor{
-    color: $primaryColor;
-}
-
-.primaryColorBack{
-    background-color: $primaryColor;
 }

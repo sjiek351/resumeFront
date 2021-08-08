@@ -4,7 +4,7 @@
     <v-tooltip :disabled="disabled" right>
         <template v-slot:activator="{ on, attrs }">
             <div v-bind="attrs" v-on="on" class="d-flex">
-                <v-progress-linear v-for="n in level" :key="n" :color="color" :height="height" class="mx-1 w30" value="100" rounded></v-progress-linear>
+                <v-progress-linear v-for="n in rank" :key="n" :color="color" :height="height" class="mx-1 w30" value="100" rounded></v-progress-linear>
             </div>
         </template>
         <span>{{describe}}</span>
@@ -16,7 +16,7 @@
 export default {
     name: 'Level',
     props: {
-        level: {
+        rank: {
             type: Number,
             default: 5
         },
