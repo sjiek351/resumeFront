@@ -1,4 +1,4 @@
-<!-- Article 4.證照-->
+<!-- Article 證照-->
 <template>
 <v-container id="rsed100">
     <h2 class="my-3">證照 Certificate</h2>

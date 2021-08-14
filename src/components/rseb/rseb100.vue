@@ -1,4 +1,4 @@
-<!-- Article 2.技能-->
+<!-- Article 技能-->
 <template>
 <v-container>
     <h2 class="my-3">技能 Skill</h2>

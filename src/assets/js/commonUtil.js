@@ -1,11 +1,16 @@
 const common = {
     // 檢查是否為開發模式
-    isLocal() {
+    isDev() {
         const nodeEnv = process.env.NODE_ENV;
         if (nodeEnv == 'development') {
             return true;
         }
         return false;
+    },
+    
+    //取得今天日期 YYYY-MM-DD
+    getToday() {
+        return this.$moment().format('YYYY-MM-DD');
     },
 
     //滾動到指定y軸
@@ -23,7 +28,7 @@ const common = {
         if (chiArr) {
             chiLength = chiArr.length;
         }
-        
+
         return (value.length - chiLength) + chiLength * 3;
     }
 

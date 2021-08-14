@@ -1,6 +1,6 @@
-<!-- Article 3.經歷/專案經歷-->
+<!-- Article 經歷/專案經歷-->
 <template>
-<v-container id="rsec110" v-if="project">
+<v-container id="rsec110" v-if="project" fluid>
     <v-hover v-slot="{ hover }">
         <v-card :elevation="hover ? 12 : 2" outlined shaped>
 
@@ -15,17 +15,21 @@
                         {{project.projectName}} {{project.job}}
                     </v-list-item-title>
 
-                    <v-list-item-subtitle>{{ project.startTime }}~{{ project.endTime }}</v-list-item-subtitle>
+                    <v-list-item-subtitle>{{ project.starttime | moment("YYYY.MM") }}~{{ project.endtime | moment("YYYY.MM") }}</v-list-item-subtitle>
 
                     <v-card-text>
-
-                        <v-chip-group show-arrows multiple>
-                            <v-chip v-for="(technology, index) in project.technologys" :key="index" class="ma-1" color="primary" filter>{{technology}}</v-chip>
+                        <!-- sm ~ lg -->
+                        <v-chip-group class="d-lg-none" column>
+                            <v-chip v-for="(skillName, index) in project.skillNames" :key="index" class="ma-1" color="primary" filter>{{skillName}}</v-chip>
+                        </v-chip-group>
+                        <!-- lg ~ -->
+                        <v-chip-group class="d-none d-lg-flex" multiple>
+                            <v-chip v-for="(skillName, index) in project.skillNames" :key="index" class="ma-1" color="primary" filter>{{skillName}}</v-chip>
                         </v-chip-group>
 
                         <div class="my-2">
                             <h4>專案工作內容:</h4>
-                            <p v-html="project.content"></p>
+                            <p v-html="project.jobDescribe" class="text-pre-line"></p>
                         </div>
 
                     </v-card-text>
@@ -58,11 +62,11 @@ export default {
     name: 'Rsec110',
     props: {
         project: Array[{
-            startTime: {
+            starttime: {
                 type: String,
                 default: ''
             },
-            endTime: {
+            endtime: {
                 type: String,
                 default: ''
             },
@@ -70,15 +74,15 @@ export default {
                 type: String,
                 default: ''
             },
-            work: {
+            jobTitle: {
                 type: String,
                 default: ''
             },
-            content: {
+            jobDescribe: {
                 type: String,
                 default: ''
             },
-            technologys: {
+            skillNames: {
                 type: Array,
                 default: []
             }

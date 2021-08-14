@@ -1,5 +1,10 @@
 {
+    "message": {
+        "msgInfo": "資料查詢成功!",
+        "msgCode": "C001"
+    },
     "personal": {
+        "idn": null,
         "name": "崔永昀",
         "nameEnglish": "Yung",
         "job": "軟體工程師",

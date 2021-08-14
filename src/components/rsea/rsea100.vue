@@ -1,11 +1,11 @@
-<!-- Article 1.關於我-->
+<!-- Article 關於我-->
 <template>
 <v-container>
     <v-row v-if="personal">
         <v-col cols="12" lg="5" class="order-lg-2 d-flex justify-center align-center">
             <div class="text-center">
                 <img id="photo" class="rounded-circle" :src="photoSrc" />
-                <h1><b>{{ personal.name }}&nbsp;{{ personal.nameEng }}</b></h1>
+                <h1><b>{{ personal.name }}&nbsp;{{ personal.nameEnglish }}</b></h1>
                 <p>
                     {{ personal.job }}<br />
                     {{ personal.location }}<br />
@@ -16,7 +16,7 @@
         </v-col>
 
         <v-col cols="12" lg="7" class="order-lg-1 d-flex justify-center align-center">
-            <p v-html="personal.introduction">
+            <p v-html="personal.introduction" class="text-pre-line">
             </p>
         </v-col>
     </v-row>
@@ -32,7 +32,7 @@ export default {
             photoSrc: './static/img/webp/me.webp'
         };
     },
-    created: function () {
+    created() {
         this.findPersonal();
     },
     methods: {

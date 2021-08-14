@@ -5,7 +5,7 @@ import Rsda100 from '@/components/rsda/rsda100'
 
 import Rsfa100 from '@/components/rsfa/rsfa100'
 import Rsfb100 from '@/components/rsfb/rsfb100'
-
+import Rsfc100 from '@/components/rsfc/rsfc100'
 
 Vue.use(Router)
 
@@ -22,22 +22,26 @@ export default new Router({
       component: Rsda100,
       children: [
         {
-          path: '',
+          path: 'Rsfa100',
           component: Rsfa100
         },
         {
           path: 'Rsfb100',
           component: Rsfb100
         },
-        // {
-        //   path: '*',
-        //   redirect: '/'
-        // },
+        {
+          path: 'Rsfc100',
+          component: Rsfc100
+        },
+        {
+          path: '*',
+          redirect: '/'
+        },
       ]
     },
-    // {
-    //   path: '*',
-    //   redirect: '/'
-    // },
+    {
+      path: '*',
+      redirect: '/'
+    },
   ]
 })

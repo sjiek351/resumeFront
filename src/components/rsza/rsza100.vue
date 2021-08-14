@@ -9,7 +9,7 @@
                         <v-container>
                             <v-row>
                                 <v-col cols="12" lg="4">
-                                    <v-btn class="mx-2" :href="'mailto:' + personal.email" icon>
+                                    <v-btn class="mx-2" :href="'mailto:' + personal.email" target="_blank" icon>
                                         <v-icon size="24px">
                                             fas fa-envelope
                                         </v-icon>
@@ -17,7 +17,7 @@
                                     <span>E-mail : {{ personal.email }}</span>
                                 </v-col>
                                 <v-col cols="12" lg="4">
-                                    <v-btn class="mx-2" :href="'tel:' + personal.cellphone" icon>
+                                    <v-btn class="mx-2" :href="'tel:' + personal.cellphone" target="_blank" icon>
                                         <v-icon size="24px">
                                             fas fa-phone
                                         </v-icon>
@@ -25,12 +25,12 @@
                                     <span>Phone : {{ personal.cellphone }}</span>
                                 </v-col>
                                 <v-col cols="12" lg="4">
-                                    <v-btn class="mx-2" icon>
+                                    <v-btn class="mx-2" :href="lineSrc" target="_blank" icon>
                                         <v-icon size="24px">
                                             fab fa-line
                                         </v-icon>
                                     </v-btn>
-                                    <v-btn class="mx-2" icon>
+                                    <v-btn class="mx-2" :href="fbSrc" target="_blank" icon>
                                         <v-icon size="24px">
                                             fab fa-facebook
                                         </v-icon>
@@ -57,7 +57,9 @@ export default {
     name: 'Rsza100',
     data() {
         return {
-            personal: {}
+            personal: {},
+            fbSrc:'https://www.facebook.com/people/%E5%B4%94%E6%B0%B8%E6%98%80/100000409191287/',
+            lineSrc:'https://line.me/ti/p/RxVnbTTeHt'
         }
     },
     created: function () {

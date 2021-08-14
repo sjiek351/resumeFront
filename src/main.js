@@ -8,9 +8,13 @@ import vuetify from '@/plugins/vuetify'
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
+import VueMoment from 'vue-moment'
+
 import common from '@/assets/js/commonUtil'
 import api from '@/assets/js/apiUtil'
 import '@/assets/scss/main.scss'
+
+Vue.use(VueMoment);
 
 Vue.prototype.$common = common;
 Vue.prototype.$api = api;
