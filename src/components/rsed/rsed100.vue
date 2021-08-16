@@ -1,31 +1,36 @@
 <!-- Article 證照-->
 <template>
 <v-container id="rsed100">
-    <h2 class="my-3">證照 Certificate</h2>
-    <v-row>
-        <v-col cols="12" lg="6" v-for="(certificate, index) in certificates" :key="index">
+    <h2 class="text-h2 my-3 text-center"><span class="highlight-primary">Certificate</span></h2>
 
-            <h3 class="text-center">{{certificate.title}}</h3>
+    <v-lazy v-model="isActive" :options="{ threshold: 1 }" transition="fadeYTransition">
+        <v-row>
+            <v-col cols="12" lg="6" v-for="(certificate, index) in certificates" :key="index">
 
-            <v-hover v-slot="{ hover }">
-                <v-card :class="{ 'cardHover': hover }" outlined>
-                    <v-img :src="certificate.src" class="d-flex align-center justify-center">
-                        <v-row class="d-flex align-center justify-center">
-                            <v-scroll-y-reverse-transition>
-                                <v-btn v-if="hover" color="black" @click="showImg(certificate.src)" fab dark large>
-                                    <v-icon dark>
-                                        fas fa-expand
-                                    </v-icon>
-                                </v-btn>
+                <h3 class="text-center">{{certificate.title}}</h3>
 
-                            </v-scroll-y-reverse-transition>
-                        </v-row>
-                    </v-img>
-                </v-card>
-            </v-hover>
+                <v-hover v-slot="{ hover }">
+                    <v-card :class="{ 'cardHover': hover }" outlined>
+                        <v-img :src="certificate.src" class="d-flex align-center justify-center">
+                            <v-row class="d-flex align-center justify-center">
+                                <v-scroll-y-reverse-transition>
 
-        </v-col>
-    </v-row>
+                                    <v-btn v-if="hover" color="black" @click="showImg(certificate.src)" fab dark large>
+                                        <v-icon dark>
+                                            fas fa-expand
+                                        </v-icon>
+                                    </v-btn>
+
+                                </v-scroll-y-reverse-transition>
+                            </v-row>
+                        </v-img>
+                    </v-card>
+                </v-hover>
+
+            </v-col>
+        </v-row>
+    </v-lazy>
+
     <vue-easy-lightbox :visible="lightboxVisible" :imgs="lightboxImg" @hide="lightboxHide()"></vue-easy-lightbox>
 </v-container>
 </template>
@@ -41,13 +46,14 @@ export default {
         return {
             certificates: [{
                     title: 'OCAJP',
-                    src: './static/img/webp/eCertificate-ocajp.webp'
+                    src: require('@/assets/img/webp/eCertificate-ocajp.webp')
                 },
                 {
                     title: 'OCPJP',
-                    src: './static/img/webp/eCertificate-ocpjp.webp'
+                    src: require('@/assets/img/webp/eCertificate-ocpjp.webp')
                 }
             ],
+            isActive: false,
             lightboxImg: '',
             lightboxVisible: false
         };
@@ -57,7 +63,7 @@ export default {
             this.lightboxImg = src;
             this.lightboxVisible = true;
         },
-        lightboxHide(){
+        lightboxHide() {
             this.lightboxVisible = false;
         }
     },
@@ -65,6 +71,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/commonUtil.scss";
+
 #rsed100 {
     .cardHover {
         opacity: 0.4;

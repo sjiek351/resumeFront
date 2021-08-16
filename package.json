@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "A Vue.js project",
-  "author": "yong",
+  "author": "yung",
   "scripts": {
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",

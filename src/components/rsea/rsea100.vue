@@ -1,23 +1,37 @@
 <!-- Article 關於我-->
 <template>
 <v-container>
-    <v-row v-if="personal">
+    <v-row>
+        <v-col cols="12">
+            <h2 class="text-h2 my-3 text-center"><span class="highlight-primary"> About</span></h2>
+        </v-col>
+
         <v-col cols="12" lg="5" class="order-lg-2 d-flex justify-center align-center">
+
             <div class="text-center">
                 <img id="photo" class="rounded-circle" :src="photoSrc" />
-                <h1><b>{{ personal.name }}&nbsp;{{ personal.nameEnglish }}</b></h1>
-                <p>
-                    {{ personal.job }}<br />
-                    {{ personal.location }}<br />
-                    電話 : {{ personal.cellphone }}<br />
-                    郵件 : {{ personal.email }}
-                </p>
+
+                <transition name="fadeXReverseTransition">
+                    <h1 v-show="personal.name && personal.nameEnglish "><b>{{ personal.name }}&nbsp;{{ personal.nameEnglish }}</b></h1>
+                </transition>
+
+                <transition name="fadeXReverseTransition">
+                    <p v-show="personal.job && personal.location && personal.cellphone && personal.email">
+                        {{ personal.job }}<br />
+                        {{ personal.location }}<br />
+                        電話 : {{ personal.cellphone | phoneFormat}}<br />
+                        郵件 : {{ personal.email }}
+                    </p>
+                </transition>
+
             </div>
         </v-col>
 
         <v-col cols="12" lg="7" class="order-lg-1 d-flex justify-center align-center">
-            <p v-html="personal.introduction" class="text-pre-line">
-            </p>
+            <transition name="fadeXTransition">
+                <p v-show="personal.introduction" v-html="personal.introduction" class="text-pre-line">
+                </p>
+            </transition>
         </v-col>
     </v-row>
 </v-container>
@@ -29,7 +43,7 @@ export default {
     data() {
         return {
             personal: {},
-            photoSrc: './static/img/webp/me.webp'
+            photoSrc: require('@/assets/img/webp/me.webp')
         };
     },
     created() {
@@ -44,13 +58,15 @@ export default {
                 .catch(error => {
                     console.log(error);
                 });
-        }
-    },
+        },
+    }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "@/assets/scss/commonUtil.scss";
+
 #photo {
-    max-width: 40vw;
+    max-width: 30vw;
 }
 </style>

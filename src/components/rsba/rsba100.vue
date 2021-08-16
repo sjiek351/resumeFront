@@ -1,7 +1,12 @@
 <!-- 載入畫面-->
 <template>
-<div class="hello">
-   
+<div id="rsba100" class="d-flex align-center justify-center">
+    <div id="headline">
+        <v-divider dark />
+        <h1 class="text-h1"><strong>YUNG YUN</strong></h1>
+        <p class="text-h6 text-right">1 year Programmer</p>
+        <v-divider dark />
+    </div>
 
 </div>
 </template>
@@ -10,45 +15,22 @@
 export default {
     name: 'Rsba100',
     data() {
-        return {
-            msg: 'Rsba100'
-        }
-    },
-    mounted() {
-        // const _canvas = document.getElementById('canvas');
-
-        // if (_canvas.getContext) { //判斷是否支援
-        //     const ctx = _canvas.getContext('2d');
-        //     //宣告ctx渲染方式
-
-        //     this.draw(ctx);
-        //     //執行draw function
-
-        // } else {
-        //     alert('your browser not support canvas')
-        //     //如果不支援
-        // };
-    },
-    methods: {
-        // draw(ctx) {
-
-        //     //利用ctx開始繪製
-        //     ctx.fillStyle = "rgb(200,0,0)";
-        //     //fillStyle:定義用於繪畫的顏色填充模式
-
-        //     ctx.fillRect(10, 10, 55, 50);
-        //     //fillRect:繪製被填充的矩形
-
-        //     ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        //     ctx.fillRect(30, 30, 55, 50);
-        //     //同上
-        // }
-    },
+        return {}
+    }
 }
 </script>
 
-<style scoped>
-/* #canvas {
-    border: 5px solid black;
-} */
+<style lang="scss" scoped>
+#rsba100 {
+    height: 90vh;
+    background-image: linear-gradient(to right bottom, rgba(176, 192, 215, 0.8), rgba(0, 0, 0, 0.8)), url('~@/assets/img/webp/background.webp');
+    background-size: cover;
+    background-position: center bottom;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+
+    #headline {
+        margin: 10px;
+        color: white;
+    }
+}
 </style>

@@ -1,7 +1,7 @@
 <!-- Article 1.關於我-->
 <template>
 <v-container>
-    <v-form ref="form" v-model="valid" lazy-validation>
+    <v-form ref="form" v-model="valid" lazy-validation @submit="modifyExperience()">
         <v-row>
             <v-col cols="12">
                 <v-text-field v-model="experience.expId" label="* 經驗編號" counter="8" :rules="[expIdRule]" />
@@ -40,7 +40,7 @@
 
         <v-row align="center" justify="space-around">
             <div class="my-3">
-                <v-btn class="mx-1" color="primary" :disabled="!valid" @click="modifyExperience()">
+                <v-btn type="submit" class="mx-1" color="primary" :disabled="!valid">
                     變更經歷
                 </v-btn>
 
@@ -94,7 +94,7 @@ export default {
             const data = this.experience;
 
             this.$api
-                .post("rsfc100/modifyExperience", data)
+                .post("rsfc100/deleteExperience", data)
                 .then((response) => {
                     if (response.data.message.msgCode == 'C001') {
                         this.$emit('needRender', true);

@@ -1,7 +1,7 @@
 <!-- Article 1.關於我-->
 <template>
 <v-container>
-    <v-form ref="form" v-model="valid" lazy-validation>
+    <v-form ref="form" v-model="valid" lazy-validation @submit="modifyProject()">
         <v-row>
 
             <v-col cols="12" lg="6">
@@ -64,7 +64,7 @@
 
         <v-row align="center" justify="space-around">
             <div class="my-3">
-                <v-btn class="mx-1" color="primary" :disabled="!valid" @click="modifyProject()">
+                <v-btn type="submit" class="mx-1" color="primary" :disabled="!valid">
                     變更專案
                 </v-btn>
 

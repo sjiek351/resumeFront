@@ -2,7 +2,6 @@
 <template>
 <v-container>
     <v-row>
-
         <v-col cols="12">
             <Rsec100 :key="componentKey" class="printBlock" />
         </v-col>

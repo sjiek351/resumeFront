@@ -1,12 +1,85 @@
 $backgroundColor: black;
 
-$primaryColor: #9FA8DA;
-$secondaryColor: #EF9A9A;
+$primaryColor: #9fa8da;
+$secondaryColor: #ef9a9a;
 
-$lightColor: #ECEFF1;
+$lightColor: #eceff1;
 $darkColor: #212121;
-
 
 .pointer {
     cursor: pointer;
+}
+
+.highlight {
+    &-primary,
+    &-secondary {
+        position: relative;
+        z-index: 0;
+        &::before {
+            $extraLength: 10px;
+            content: "";
+            position: absolute;
+            top: 60%;
+            left: calc(-#{$extraLength});
+            width: calc(100% + #{$extraLength} * 2);
+            height: 30%;
+            border-radius: 0.5rem;
+            z-index: -1;
+        }
+    }
+    &-primary::before {
+        background-color: $primaryColor;
+    }
+    &-secondary::before {
+        background-color: $secondaryColor;
+    }
+}
+
+//vue transition 動畫
+.fadeYTransition {
+    &-enter-active,
+    &-leave-active {
+        transition: all 1s ease-out;
+    }
+    &-enter,
+    &-leave {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+.fadeYReverseTransition {
+    &-enter-active,
+    &-leave-active {
+        transition: all 1s ease-out;
+    }
+    &-enter,
+    &-leave {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+.fadeXTransition {
+    &-enter-active,
+    &-leave-active {
+        transition: all 1s ease-out;
+    }
+    &-enter,
+    &-leave {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+}
+
+.fadeXReverseTransition {
+    &-enter-active,
+    &-leave-active {
+        transition: all 1s ease-out;
+    }
+    &-enter,
+    &-leave {
+        opacity: 0;
+        transform: translateX(30px);
+    }
 }

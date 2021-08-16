@@ -7,7 +7,7 @@ const common = {
         }
         return false;
     },
-    
+
     //取得今天日期 YYYY-MM-DD
     getToday() {
         return this.$moment().format('YYYY-MM-DD');

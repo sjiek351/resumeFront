@@ -1,29 +1,33 @@
 <!-- 管理版面-->
 <template>
 <v-container>
-    <h1>修改履歷資料</h1>
     <v-row>
+        <v-col cols="12">
+            <h2 class="text-h2 my-3 text-center">
+                <span class="highlight-primary">修改履歷資料</span>
+            </h2>
+        </v-col>
 
         <v-col cols="12" v-if="!idnCheck">
-            <v-card class="ma-2" outlined tile>
+            <v-form ref="form" v-model="valid" lazy-validation @submit="findPersonal()">
+                <v-card class="ma-2" outlined tile>
+                    <v-alert v-if="idnErr" border="right" color="secondary" dark>
+                        查無資料
+                    </v-alert>
 
-                <v-alert v-if="idnErr" border="right" color="secondary" dark> 查無資料 </v-alert>
-
-                <v-card-text>
-                    <v-form ref="form" v-model="valid"  lazy-validation>
+                    <v-card-text>
                         <v-text-field v-model="idn" label="請輸入身分證字號" :rules="[idRule]" />
-                    </v-form>
-                </v-card-text>
+                    </v-card-text>
 
-                <v-card-actions>
-                    <v-spacer />
-                    <v-btn class="my-3" color="primary" :disabled="!valid" @click="findPersonal()">
-                        確認
-                    </v-btn>
-                    <v-spacer />
-                </v-card-actions>
-
-            </v-card>
+                    <v-card-actions>
+                        <v-spacer />
+                        <v-btn type="submit" class="my-3" color="primary" :disabled="!valid">
+                            確認
+                        </v-btn>
+                        <v-spacer />
+                    </v-card-actions>
+                </v-card>
+            </v-form>
         </v-col>
 
         <v-col cols="12" v-if="idnCheck" outlined tile>
@@ -43,7 +47,6 @@
                 </v-card>
             </v-card>
         </v-col>
-
     </v-row>
 </v-container>
 </template>
@@ -80,7 +83,7 @@ export default {
                 this.idnErr = false;
 
                 const data = {
-                    idn: this.idn
+                    idn: this.idn,
                 };
 
                 this.$api
@@ -89,7 +92,7 @@ export default {
                         const personal = response.data.personal;
                         if (personal) {
                             this.idnCheck = true;
-                            this.goArticle('/Rsda100/Rsfa100');
+                            this.goArticle("/Rsda100/Rsfa100");
                         } else {
                             this.idnErr = true;
                         }
@@ -101,13 +104,13 @@ export default {
         },
         goArticle(route) {
             this.$router.push({
-                path: route
+                path: route,
             });
         },
         changeIdn() {
             this.idn = null;
             this.idnCheck = false;
-            this.$router.push('/Rsda100');
+            this.$router.push("/Rsda100");
         },
         /* Vuetify 檢核 */
         idRule(value) {

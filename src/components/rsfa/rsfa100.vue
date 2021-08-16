@@ -1,7 +1,7 @@
 <!-- Article 修改關於我-->
 <template>
 <v-container>
-    <v-form ref="form" v-model="valid" lazy-validation>
+    <v-form ref="form" v-model="valid" lazy-validation @submit="modifyPersonal()">
         <v-row>
             <v-col cols="12" lg="6">
                 <v-text-field v-model="personal.name" label="* 名字" counter="3" :rules="[nameRule]" />
@@ -33,7 +33,7 @@
         </v-row>
 
         <v-row align="center" justify="space-around">
-            <v-btn class="my-3" color="primary" :disabled="!valid" @click="modifyPersonal()">
+            <v-btn type="submit" class="my-3" color="primary" :disabled="!valid">
                 變更
             </v-btn>
         </v-row>

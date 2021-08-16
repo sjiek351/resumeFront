@@ -1,7 +1,7 @@
 <!-- Article 修改技能-->
 <template>
 <v-container>
-    <v-form ref="form" v-model="valid" lazy-validation>
+    <v-form ref="form" v-model="valid" lazy-validation @submit="modifySkill()">
         <v-row>
             <v-col cols="12">
                 <Rseb100 class="printBlock" :key="componentKey"/>
@@ -22,7 +22,7 @@
 
         <v-row align="center" justify="space-around">
             <div class="my-3">
-                <v-btn class="mx-1" color="primary" :disabled="!valid" @click="modifySkill()">
+                <v-btn type="submit" class="mx-1" color="primary" :disabled="!valid">
                     變更
                 </v-btn>
 
