@@ -33,7 +33,6 @@ export default {
         }
     },
     computed: {
-        // 计算属性的 getter
         disabled() {
             if (this.describe) {
                 return false;
@@ -45,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/scss/commonUtil.scss";
+@import "@/assets/scss/commonUtil.scss";
 
 #level {
     .w30 {

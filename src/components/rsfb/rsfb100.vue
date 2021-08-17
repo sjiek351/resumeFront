@@ -1,10 +1,10 @@
 <!-- Article 修改技能-->
 <template>
 <v-container>
-    <v-form ref="form" v-model="valid" lazy-validation @submit="modifySkill()">
+    <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="modifySkill()">
         <v-row>
             <v-col cols="12">
-                <Rseb100 class="printBlock" :key="componentKey"/>
+                <Rseb100 class="printBlock" :key="componentKey" />
             </v-col>
 
             <v-col cols="6">
@@ -32,15 +32,18 @@
             </div>
         </v-row>
     </v-form>
+    <Messagebar :message="message" :key="messageKey" />
 </v-container>
 </template>
 
 <script>
 import Rseb100 from "../rseb/rseb100.vue";
+import Messagebar from "../commonUtil/messagebar.vue";
 export default {
     name: "Rsfb100",
     components: {
-        Rseb100
+        Rseb100,
+        Messagebar
     },
     data() {
         return {
@@ -73,7 +76,9 @@ export default {
                 value: 3
             }],
             valid: true,
-            componentKey: 0
+            componentKey: 0,
+            message: null,
+            messageKey: 0
         };
     },
     methods: {
@@ -86,11 +91,9 @@ export default {
 
                 this.$api.post('rsfb100/modifySkill', data)
                     .then(response => {
-                        if (response.data.message.msgCode == 'C001') {
-                            this.renderRseb100();
-                        } else {
-                            console.log(response.data.message);
-                        }
+                        this.renderRseb100();
+                        this.message = response.data.message;
+                        this.messageKey++;
                     })
                     .catch(error => {
                         console.log(error);
@@ -103,11 +106,9 @@ export default {
 
                 this.$api.post('rsfb100/deleteSkill', data)
                     .then(response => {
-                        if (response.data.message.msgCode == 'C001') {
-                            this.renderRseb100();
-                        } else {
-                            console.log(response.data.message);
-                        }
+                        this.renderRseb100();
+                        this.message = response.data.message;
+                        this.messageKey++;
                     })
                     .catch(error => {
                         console.log(error);

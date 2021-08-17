@@ -1,7 +1,7 @@
 <!-- Article 1.關於我-->
 <template>
 <v-container>
-    <v-form ref="form" v-model="valid" lazy-validation @submit="modifyProject()">
+    <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="modifyProject()">
         <v-row>
 
             <v-col cols="12" lg="6">
@@ -74,13 +74,17 @@
             </div>
         </v-row>
     </v-form>
-
+    <Messagebar :message="message" :key="messageKey" />
 </v-container>
 </template>
 
 <script>
+import Messagebar from "../commonUtil/messagebar.vue";
 export default {
     name: "Rsfc120",
+    components: {
+        Messagebar
+    },
     data() {
         return {
             project: {
@@ -97,6 +101,8 @@ export default {
             starttimeMenu: false,
             endtimeMenu: false,
             valid: true,
+            message: null,
+            messageKey: 0
         };
     },
     methods: {
@@ -114,11 +120,9 @@ export default {
 
                 this.$api.post('rsfc100/modifyProject', data)
                     .then(response => {
-                        if (response.data.message.msgCode == 'C001') {
-                            this.$emit('needRender', true);
-                        } else {
-                            console.log(response.data.message);
-                        }
+                        this.$emit('needRender', true);
+                        this.message = response.data.message;
+                        this.messageKey++;
                     })
                     .catch(error => {
                         console.log(error);
@@ -130,11 +134,9 @@ export default {
 
             this.$api.post('rsfc100/deleteProject', data)
                 .then(response => {
-                    if (response.data.message.msgCode == 'C001') {
-                        this.$emit('needRender', true);
-                    } else {
-                        console.log(response.data.message);
-                    }
+                    this.$emit('needRender', true);
+                    this.message = response.data.message;
+                    this.messageKey++;
                 })
                 .catch(error => {
                     console.log(error);

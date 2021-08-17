@@ -9,7 +9,7 @@
         </v-col>
 
         <v-col cols="12" v-if="!idnCheck">
-            <v-form ref="form" v-model="valid" lazy-validation @submit="findPersonal()">
+            <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="findPersonal()">
                 <v-card class="ma-2" outlined tile>
                     <v-alert v-if="idnErr" border="right" color="secondary" dark>
                         查無資料

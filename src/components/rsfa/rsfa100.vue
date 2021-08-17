@@ -1,7 +1,7 @@
 <!-- Article 修改關於我-->
 <template>
 <v-container>
-    <v-form ref="form" v-model="valid" lazy-validation @submit="modifyPersonal()">
+    <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="modifyPersonal()">
         <v-row>
             <v-col cols="12" lg="6">
                 <v-text-field v-model="personal.name" label="* 名字" counter="3" :rules="[nameRule]" />
@@ -38,14 +38,19 @@
             </v-btn>
         </v-row>
     </v-form>
+    <Messagebar :message="message" :key="messageKey" />
 </v-container>
 </template>
 
 <script>
+import Messagebar from "../commonUtil/messagebar.vue";
 export default {
     name: "Rsfa100",
     props: {
         idn: String,
+    },
+    components: {
+        Messagebar
     },
     data() {
         return {
@@ -60,6 +65,8 @@ export default {
                 introduction: null,
             },
             valid: true,
+            message: null,
+            messageKey: 0
         };
     },
     created() {
@@ -74,6 +81,8 @@ export default {
                 .post("rsfa100/findPersonal", data)
                 .then((response) => {
                     this.personal = response.data.personal;
+                    this.message = response.data.message;
+                    this.messageKey++;
                 })
                 .catch((error) => {
                     console.log(error);
@@ -88,6 +97,8 @@ export default {
                     .post("rsfa100/modifyPersonal", data)
                     .then((response) => {
                         this.personal = response.data.personal;
+                        this.message = response.data.message;
+                        this.messageKey++;
                     })
                     .catch((error) => {
                         console.log(error);
