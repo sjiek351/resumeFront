@@ -16,28 +16,24 @@
         <v-app-bar-nav-icon class="d-lg-none" @click="drawer = !drawer"></v-app-bar-nav-icon>
 
         <v-toolbar-items class="d-none d-lg-flex">
-            <v-divider vertical></v-divider>
 
             <v-btn href="https://github.com/sjiek351" target="_blank" text>
                 <v-icon>fab fa-github</v-icon>
                 <span class="mx-2">Github</span>
             </v-btn>
 
-            <v-divider vertical></v-divider>
 
             <v-btn @click="print()" text>
                 <v-icon>fas fa-print</v-icon>
                 <span class="mx-2">列印</span>
             </v-btn>
 
-            <v-divider vertical></v-divider>
 
             <v-btn @click="toggleTheme()" text>
                 <v-icon>fas fa-adjust</v-icon>
                 <span class="mx-2">切換</span>
             </v-btn>
 
-            <v-divider vertical></v-divider>
 
             <v-btn @click="toggleSetting()" text>
                 <v-icon>fas fa-cog</v-icon>
