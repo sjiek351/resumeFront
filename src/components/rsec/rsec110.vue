@@ -1,4 +1,4 @@
-<!-- Article 經歷/專案經歷-->
+<!-- Article 經歷/專案-->
 <template>
 <v-container id="rsec110" v-if="project" fluid>
     <v-hover v-slot="{ hover }">

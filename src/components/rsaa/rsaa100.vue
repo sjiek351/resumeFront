@@ -69,24 +69,19 @@ export default {
     data() {
         return {
             drawer: false,
-            group: null,
             logoSrc: require('@/assets/img/webp/logo.webp'),
         }
     },
-    watch: {
-        group() {
-            this.drawer = false
-        },
-    },
     methods: {
+        goHome() {
+            this.$router.push('/');
+        },
         print() {
             window.print();
         },
         toggleTheme() {
             this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-        },
-        goHome() {
-            this.$router.push('/');
+            this.drawer = false;
         },
         toggleSetting() {
             const settingPath = '/Rsda100';
@@ -95,6 +90,7 @@ export default {
             } else {
                 this.$router.push('Rsda100');
             }
+            this.drawer = false;
         }
     },
 }

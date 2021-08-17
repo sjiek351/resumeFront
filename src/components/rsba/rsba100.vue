@@ -1,4 +1,4 @@
-<!-- 載入畫面-->
+<!-- 橫欄-->
 <template>
 <div id="rsba100" class="d-flex align-center justify-center">
     <div id="headline">

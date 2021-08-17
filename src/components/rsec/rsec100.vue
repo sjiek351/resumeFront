@@ -12,8 +12,8 @@
             <div v-for="(exp,index) in exps" v-bind:key="index" class="d-lg-none my-3" color="primary">
 
                 <h3>
-                    <span v-if="exp.starttime && exp.endtime">{{ exp.starttime | moment("YYYY.MM") }}~{{ exp.endtime | moment("YYYY.MM") }}</span>
-                    <span v-else-if="exp.endtime">{{ exp.endtime | moment("YYYY.MM") }}</span>
+                    <span v-if="exp.starttime != exp.endtime">{{ exp.starttime | moment("YYYY.MM") }}~{{ exp.endtime | moment("YYYY.MM") }}</span>
+                    <span v-else>{{ exp.endtime | moment("YYYY.MM") }}</span>
                 </h3>
 
                 <h3>
@@ -27,7 +27,9 @@
                 </div>
 
                 <div v-for="(project, index) in exp.projects" v-bind:key="index">
-                    <Rsec110 :project="project" />
+                    <v-lazy v-model="isActive" :options="{ threshold: 1 }" transition="fadeYTransition">
+                        <Rsec110 :project="project" />
+                    </v-lazy>
                 </div>
             </div>
         </v-col>

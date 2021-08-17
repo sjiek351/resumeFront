@@ -1,4 +1,4 @@
-<!-- Article 修改經歷-->
+<!-- Article 修改經歷版面-->
 <template>
 <v-container>
     <v-row>

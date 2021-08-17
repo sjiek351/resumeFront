@@ -1,10 +1,10 @@
 <!-- 元件架構-->
 <template>
 <v-app>
-    <!-- Navbar -->
+    <!-- 導覽列 -->
     <Rsaa100 />
 
-    <!-- banner -->
+    <!-- 橫欄 -->
     <Rsba100 />
 
     <v-main>
@@ -30,10 +30,7 @@ export default {
         Rsza100,
     },
     data() {
-        return {
-            isNavbarShow: false,
-            articleAreaY: 0
-        };
+        return {};
     },
 };
 </script>
