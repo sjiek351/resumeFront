@@ -1,6 +1,6 @@
 # 個人履歷-前端
 
-靜態網頁:https://sjiek351.github.io/resumeFront/
+靜態網頁 : https://sjiek351.github.io/resumeFront/
 
 > 這是一個Vue專案，使用Vue CLI開發，藉由呼叫API完成資料操作。
 
