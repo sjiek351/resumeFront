@@ -7,15 +7,15 @@
                 <Rseb100 class="printBlock" :key="componentKey" />
             </v-col>
 
-            <v-col cols="6">
+            <v-col cols="12" lg="6">
                 <v-text-field v-model="skill.skillName" label="* 技能名稱" counter="30" :rules="[skillNameRule]" />
             </v-col>
 
-            <v-col cols="3">
+            <v-col cols="6" lg="3">
                 <v-select v-model="skill.type" :items="typeItem" item-text="text" item-value="value" label="* 技能類別"></v-select>
             </v-col>
 
-            <v-col cols="3">
+            <v-col cols="6" lg="3">
                 <v-select v-model="skill.rank" :items="rankItem" item-text="text" item-value="value" label="* 技能等級"></v-select>
             </v-col>
         </v-row>

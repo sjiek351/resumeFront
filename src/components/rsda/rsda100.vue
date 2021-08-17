@@ -4,7 +4,7 @@
     <v-row>
         <v-col cols="12">
             <h2 class="text-h2 my-3 text-center">
-                <span class="highlight-primary">修改履歷資料</span>
+                <span class="highlight-primary">修改資料</span>
             </h2>
         </v-col>
 

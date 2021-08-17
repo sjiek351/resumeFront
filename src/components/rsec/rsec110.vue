@@ -11,11 +11,11 @@
                         Project
                     </div>
 
-                    <v-list-item-title class="text-h5 mb-1">
+                    <v-card-title class="text-h5 mb-1">
                         {{project.projectName}} {{project.job}}
-                    </v-list-item-title>
+                    </v-card-title>
 
-                    <v-list-item-subtitle>{{ project.starttime | moment("YYYY.MM") }}~{{ project.endtime | moment("YYYY.MM") }}</v-list-item-subtitle>
+                    <v-card-subtitle>{{ project.starttime | moment("YYYY.MM") }}~{{ project.endtime | moment("YYYY.MM") }}</v-card-subtitle>
 
                     <v-card-text>
                         <!-- sm ~ lg -->
@@ -94,5 +94,5 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>
