@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: './', // 110.07.05 崔永昀 修改打包後的靜態資源引用路徑
+    assetsPublicPath: './resumeFront/', // 110.08.17 崔永昀 修改打包後的靜態資源引用路徑
 
     /**
      * Source Maps
