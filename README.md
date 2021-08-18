@@ -1,6 +1,13 @@
-# resume
+# 個人履歷-前端
 
-> A Vue.js project
+靜態網頁 : https://sjiek351.github.io/resumeFront/
+
+> 這是一個Vue專案，使用Vue CLI開發，藉由呼叫API完成資料操作。
+
+* 使用Vuetify框架做排版及設計
+* Axios發送HTTP請求，搭配Json假資料模擬回傳
+* vue-moment來格式化時間
+* 選擇SCSS做CSS的預處理以方便日後維護
 
 ## Build Setup
 
@@ -18,4 +25,3 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
