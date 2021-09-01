@@ -22,18 +22,15 @@
                 <span class="mx-2">Github</span>
             </v-btn>
 
-
             <v-btn @click="print()" text>
                 <v-icon>fas fa-print</v-icon>
                 <span class="mx-2">列印</span>
             </v-btn>
 
-
             <v-btn @click="toggleTheme()" text>
                 <v-icon>fas fa-adjust</v-icon>
                 <span class="mx-2">切換</span>
             </v-btn>
-
 
             <v-btn @click="toggleSetting()" text>
                 <v-icon>fas fa-cog</v-icon>
@@ -77,6 +74,7 @@ export default {
             this.$router.push('/');
         },
         print() {
+            alert("請確認畫面內容皆已載入完畢，並勾選背景圖形顯示。");
             window.print();
         },
         toggleTheme() {

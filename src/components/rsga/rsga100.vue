@@ -1,0 +1,39 @@
+<!-- 裝飾 貓 -->
+<template>
+<div id="rsga100">
+    <div id="activeCat" class="d-none d-lg-block">
+
+    </div>
+</div>
+</template>
+
+<script>
+import ActiveCat from './activeCat/activeCat'
+export default {
+    name: "Rsga100",
+    data() {
+        return {};
+    },
+    created() {
+        const activeCat = new ActiveCat();
+    },
+    methods: {},
+};
+</script>
+
+<style lang="scss" scoped>
+#rsga100 {
+    #activeCat {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+}
+
+@media print {
+    #activeCat {
+        position: absolute;
+    }
+}
+</style>
