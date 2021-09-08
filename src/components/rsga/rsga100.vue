@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import ActiveCat from './activeCat/activeCat'
+import ActiveCat from './phaser/activeCat'
 export default {
     name: "Rsga100",
     data() {

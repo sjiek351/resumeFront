@@ -22,7 +22,7 @@ export default class ActiveCat extends Phaser.Game {
 
                 this.anims.create({
                     key: 'run',
-                    frames: this.anims.generateFrameNumbers('cat', { start: 0, end: 16 }),
+                    frames: this.anims.generateFrameNumbers('cat', { start: 0, end: 15 }),
                     frameRate: 15,
                     repeat: -1,
                     delay: 4000,
