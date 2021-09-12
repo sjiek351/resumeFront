@@ -1,7 +1,7 @@
 $backgroundColor: black;
 
-$primaryColor: #9fa8da;
-$secondaryColor: #ef9a9a;
+$primaryColor: #9FA8DA;
+$secondaryColor: #E8EAF6;
 
 $lightColor: #eceff1;
 $darkColor: #212121;
@@ -42,7 +42,7 @@ $darkColor: #212121;
         transition: all 1s ease-out;
     }
     &-enter,
-    &-leave {
+    &-leave-to {
         opacity: 0;
         transform: translateY(-30px);
     }
@@ -54,7 +54,7 @@ $darkColor: #212121;
         transition: all 1s ease-out;
     }
     &-enter,
-    &-leave {
+    &-leave-to {
         opacity: 0;
         transform: translateY(30px);
     }
@@ -66,7 +66,7 @@ $darkColor: #212121;
         transition: all 1s ease-out;
     }
     &-enter,
-    &-leave {
+    &-leave-to {
         opacity: 0;
         transform: translateX(-30px);
     }
@@ -78,7 +78,7 @@ $darkColor: #212121;
         transition: all 1s ease-out;
     }
     &-enter,
-    &-leave {
+    &-leave-to {
         opacity: 0;
         transform: translateX(30px);
     }

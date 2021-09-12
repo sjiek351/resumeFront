@@ -15,7 +15,10 @@ const common = {
 
     //滾動到指定y軸
     scroll2Position(y) {
-        window.scrollTo(0, y);
+        window.scrollTo({
+            top: y,
+            behavior: 'smooth'
+        });
     },
 
     /* 檢核 */

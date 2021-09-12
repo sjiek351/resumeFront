@@ -1,10 +1,10 @@
 <!-- 元件架構-->
 <template>
 <v-app>
-    <!-- 導覽列 -->
-    <Rsaa100 />
+    <!-- Loading -->
+    <Rsaa100 :overlay="overlay" />
 
-    <!-- 橫欄 -->
+    <!-- Header -->
     <Rsba100 />
 
     <v-main>
@@ -14,9 +14,10 @@
     <Rsga100 />
 
     <!-- Footer -->
-    <div class="primary">
+    <div class="secondary">
         <Rsza100 />
     </div>
+
 </v-app>
 </template>
 
@@ -34,8 +35,13 @@ export default {
         Rsza100,
     },
     data() {
-        return {};
+        return {
+            overlay: true
+        };
     },
+    mounted() {
+        this.overlay = false; //關閉Loading畫面
+    }
 };
 </script>
 

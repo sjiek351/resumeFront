@@ -1,8 +1,7 @@
-<!-- 裝飾 貓 -->
+<!-- phaserGame 貓 -->
 <template>
 <div id="rsga100">
     <div id="activeCat" class="d-none d-lg-block">
-
     </div>
 </div>
 </template>
@@ -23,16 +22,14 @@ export default {
 
 <style lang="scss" scoped>
 #rsga100 {
-    #activeCat {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        z-index: 10;
-    }
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
 }
 
 @media print {
-    #activeCat {
+    #rsga100 {
         position: absolute;
     }
 }
