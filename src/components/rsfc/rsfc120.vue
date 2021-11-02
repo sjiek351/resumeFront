@@ -60,6 +60,10 @@
                 <v-textarea v-model="project.jobDescribe" label="工作內容" counter="300" :rules="[jobDescribeRule]" clear-icon="far fa-times-circle" clearable />
             </v-col>
 
+            <v-col cols="12">
+                <v-text-field v-model="project.display" label="展示網址" counter="100" :rules="[displayRule]" />
+            </v-col>
+
         </v-row>
 
         <v-row align="center" justify="space-around">
@@ -68,7 +72,7 @@
                     變更專案
                 </v-btn>
 
-                <v-btn class="mx-1" color="secondary" @click="deleteProject()">
+                <v-btn class="mx-1" color="red" dark @click="deleteProject()">
                     刪除專案
                 </v-btn>
             </div>
@@ -95,6 +99,7 @@ export default {
                 projectName: null,
                 jobTitle: null,
                 jobDescribe: null,
+                display: null,
                 skillNames: []
             },
             skillNameInput: null,
@@ -193,6 +198,13 @@ export default {
         jobDescribeRule(value) {
             if (value && value.length > 300) {
                 return '請勿超過300字元';
+            }
+
+            return true;
+        },
+        displayRule(value) {
+            if (value && value.length > 100) {
+                return '請勿超過100字元';
             }
 
             return true;

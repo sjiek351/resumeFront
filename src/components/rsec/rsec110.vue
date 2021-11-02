@@ -28,7 +28,7 @@
                         </v-chip-group>
 
                         <div class="my-2">
-                            <h4>專案工作內容:</h4>
+                            <h4>專案內容:</h4>
                             <p v-html="project.jobDescribe" class="text-pre-line"></p>
                         </div>
 
@@ -42,8 +42,8 @@
 
                 <v-spacer></v-spacer>
 
-                <v-btn v-if="project.display" :href="project.display" target="_blank" outlined rounded text>
-                    Demo
+                <v-btn v-if="project.display" :href="project.display" color="indigo" target="_blank" rounded outlined>
+                    前往
                 </v-btn>
 
                 <v-btn v-else rounded disabled>

@@ -26,7 +26,7 @@
                     變更
                 </v-btn>
 
-                <v-btn class="mx-1" color="secondary" :disabled="!valid" @click="deleteSkill()">
+                <v-btn class="mx-1" color="red" dark :disabled="!valid" @click="deleteSkill()">
                     刪除
                 </v-btn>
             </div>

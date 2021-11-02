@@ -44,7 +44,7 @@
                     變更經歷
                 </v-btn>
 
-                <v-btn class="mx-1" color="secondary" @click="deleteExperience()">
+                <v-btn class="mx-1"  color="red" dark @click="deleteExperience()">
                     刪除經歷
                 </v-btn>
             </div>

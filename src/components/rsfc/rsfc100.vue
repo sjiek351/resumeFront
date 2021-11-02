@@ -10,9 +10,12 @@
             <h2>
                 <span v-if="!isProject">修改經歷</span>
                 <span v-else>修改專案</span>
-                <v-switch v-model="isProject" label="Project"></v-switch>
             </h2>
 
+            <div class="d-flex">
+                <v-switch v-model="isProject" label="Project" />
+            </div>
+            
             <template v-if="!isProject">
                 <Rsfc110 class="printBlock" @needRender="renderRsec100" />
             </template>
