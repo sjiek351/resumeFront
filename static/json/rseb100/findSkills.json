@@ -85,12 +85,27 @@
             "rank": 1
         },
         {
+            "skillName": "Nuxt",
+            "type": 2,
+            "rank": 1
+        },
+        {
             "skillName": "SpringAspects",
             "type": 2,
             "rank": 1
         },
         {
             "skillName": "SpringBoot",
+            "type": 2,
+            "rank": 1
+        },
+        {
+            "skillName": "SpringDataJPA",
+            "type": 2,
+            "rank": 1
+        },
+        {
+            "skillName": "Vuetify",
             "type": 2,
             "rank": 1
         },
@@ -118,6 +133,16 @@
             "skillName": "iText",
             "type": 3,
             "rank": 2
+        },
+        {
+            "skillName": "AnimatedGIF",
+            "type": 3,
+            "rank": 1
+        },
+        {
+            "skillName": "SpringMail",
+            "type": 3,
+            "rank": 1
         },
         {
             "skillName": "Eclipse",
@@ -155,7 +180,17 @@
             "rank": 1
         },
         {
+            "skillName": "MySQL Workbench",
+            "type": 4,
+            "rank": 1
+        },
+        {
             "skillName": "NetBeans",
+            "type": 4,
+            "rank": 1
+        },
+        {
+            "skillName": "PuTTY",
             "type": 4,
             "rank": 1
         }
